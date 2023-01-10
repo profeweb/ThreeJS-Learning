@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/04-webpack/bundler/webpack.common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/04-webpack/bundler/webpack.dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/04-webpack/bundler/webpack.prod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/04-webpack/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/04-webpack/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/04-webpack/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/04-webpack/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/04-webpack/src/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/04-webpack/src/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/04-webpack/static/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/04-webpack/static/door.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/fundamentals/basic 01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/fundamentals/basic 01.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/BoxGeometry 01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/BoxGeometry 02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/CircleGeometry 01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/CircleGeometry 02.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,12 +42,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics",
+    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/primitives",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\primitives" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics" />
     </key>
   </component>
@@ -64,7 +60,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672936230551</updated>
-      <workItem from="1672936232314" duration="4410000" />
+      <workItem from="1672936232314" duration="4531000" />
+      <workItem from="1672993579383" duration="595000" />
+      <workItem from="1673250299886" duration="96000" />
+      <workItem from="1673371565968" duration="3591000" />
     </task>
     <task id="LOCAL-00001" summary="ThreeJS">
       <created>1672936419332</created>
@@ -87,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672936948977</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ThreeJS">
+      <created>1672956130954</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672956130954</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
