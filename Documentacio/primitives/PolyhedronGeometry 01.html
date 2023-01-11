@@ -55,8 +55,8 @@
 
             const material = new THREE.MeshPhongMaterial({color: 0x44aa88});
             material.side = THREE.DoubleSide;
-            const cone = new THREE.Mesh(geometry, material);
-            scene.add(cone);
+            const mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
 
 
             function resizeRendererToDisplaySize(renderer) {
@@ -81,8 +81,8 @@
 
                 const speed = 1;
                 const rot = time * speed;
-                cone.rotation.x = rot;
-                cone.rotation.y = rot;
+                mesh.rotation.x = rot;
+                mesh.rotation.y = rot;
 
                 renderer.render(scene, camera);
 
