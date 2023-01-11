@@ -48,8 +48,8 @@
 
             const material = new THREE.MeshPhongMaterial({color: 0x44aa88});
             material.side = THREE.DoubleSide;
-            const cone = new THREE.Mesh(geometry, material);
-            scene.add(cone);
+            const mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
 
 
             function resizeRendererToDisplaySize(renderer) {

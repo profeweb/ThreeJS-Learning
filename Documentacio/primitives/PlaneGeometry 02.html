@@ -36,8 +36,12 @@
             light.position.set(-1, 2, 4);
             scene.add(light);
 
-            const radius = 3;
-            const geometry = new THREE.IcosahedronGeometry(radius);
+            const width = 9;
+            const height = 9;
+            const widthSegments = 2;
+            const heightSegments = 2;
+            const geometry = new THREE.PlaneGeometry(width, height, widthSegments, heightSegments);
+
 
             const material = new THREE.MeshPhongMaterial({color: 0x44aa88});
             material.side = THREE.DoubleSide;

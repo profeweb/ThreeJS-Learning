@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/CylinderGeometry 01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/CylinderGeometry 02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/DodecahedronGeometry 01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/DodecahedronGeometry 02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/ExtrudeGeometry 01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/ExtrudeGeometry 02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/IcosahedronGeometry 01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/IcosahedronGeometry 02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/PlaneGeometry 01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/PlaneGeometry 02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/PolyhedronGeometry 01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/RingGeometry 01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/primitives/RingGeometry 02ç.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,16 +35,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/primitives",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/primitives&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\primitives" />
@@ -72,7 +69,8 @@
       <workItem from="1672993579383" duration="595000" />
       <workItem from="1673250299886" duration="96000" />
       <workItem from="1673371565968" duration="3857000" />
-      <workItem from="1673422286340" duration="6142000" />
+      <workItem from="1673422286340" duration="7739000" />
+      <workItem from="1673430244914" duration="609000" />
     </task>
     <task id="LOCAL-00001" summary="ThreeJS">
       <created>1672936419332</created>
@@ -165,7 +163,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673427617808</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ThreeJS">
+      <created>1673428707716</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673428707716</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ThreeJS">
+      <created>1673428840026</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1673428840026</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ThreeJS">
+      <created>1673430267120</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673430267120</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

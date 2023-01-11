@@ -36,8 +36,13 @@
             light.position.set(-1, 2, 4);
             scene.add(light);
 
-            const radius = 3;
-            const geometry = new THREE.IcosahedronGeometry(radius);
+            const innerRadius = 2; 
+            const outerRadius = 5;
+            const thetaSegments = 18;const phiSegments = 2;
+            const thetaStart = Math.PI * 0.25;
+            const thetaLength = Math.PI * 1.5;
+            const geometry = new THREE.RingGeometry(innerRadius, outerRadius, thetaSegments, phiSegments, thetaStart, thetaLength);
+
 
             const material = new THREE.MeshPhongMaterial({color: 0x44aa88});
             material.side = THREE.DoubleSide;
