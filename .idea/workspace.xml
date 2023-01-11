@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS" />
+    <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
+      <change afterPath="$PROJECT_DIR$/Documentacio/fundamentals/helloBox/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/fundamentals/helloBox/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/example 01/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/example 01/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/three.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/three.min.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,14 +40,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/primitives",
+    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/fundamentals/helloBox",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\fundamentals\helloBox" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\primitives" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -56,6 +66,7 @@
       <workItem from="1672993579383" duration="595000" />
       <workItem from="1673250299886" duration="96000" />
       <workItem from="1673371565968" duration="3857000" />
+      <workItem from="1673422286340" duration="1233000" />
     </task>
     <task id="LOCAL-00001" summary="ThreeJS">
       <created>1672936419332</created>
@@ -92,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673375389486</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ThreeJS">
+      <created>1673422489280</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673422489280</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
