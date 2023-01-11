@@ -9,22 +9,20 @@
     <script type="importmap">
     {
       "imports": {
-        "three": "https://unpkg.com/three@0.147.0/build/three.module.js",
-        "three/addons/": "https://unpkg.com/three@0.147.0/examples/jsm/"
+        "three": "https://unpkg.com/three@0.147.0/build/three.module.js"
       }
     }
     </script>
 
     <script type="module">
         import * as THREE from 'three';
-        import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 
         function main() {
             const canvas = document.querySelector('#c');
             const renderer = new THREE.WebGLRenderer({canvas});
 
             const fov = 75;
-            const aspect = 2;  // the canvas default
+            const aspect = 2;
             const near = 0.1;
             const far = 50;
             const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
@@ -38,22 +36,12 @@
             light.position.set(-1, 2, 4);
             scene.add(light);
 
-            const loader = new FontLoader();
-
-            loader.load( '../resources/fonts/helvetiker_regular.typeface.json', function ( font ) {
-
-                const geometry = new TextGeometry( 'Hello three.js!', {
-                    font: font,
-                    size: 80,
-                    height: 5,
-                    curveSegments: 12,
-                    bevelEnabled: true,
-                    bevelThickness: 10,
-                    bevelSize: 8,
-                    bevelOffset: 0,
-                    bevelSegments: 5
-                } );
-            } );
+            const path = new CustomSinCurve(4);
+            const radius = 1;  // ui: radiu
+            const tubularSegments = 20;  // ui: segments tubulars
+            const radialSegments = 8;  // ui: segments radials
+            const closed = false;  // ui: corba tancada
+            const geometry = new THREE.TubeGeometry(path, tubularSegments, radius, radialSegments, closed);
 
 
             const material = new THREE.MeshPhongMaterial({color: 0x44aa88});
@@ -93,6 +81,19 @@
             }
 
             requestAnimationFrame(render);
+        }
+
+        class CustomSinCurve extends THREE.Curve {
+            constructor(scale) {
+                super();
+                this.scale = scale;
+            }
+            getPoint(t) {
+                const tx = t * 3 - 1.5;
+                const ty = Math.sin(2 * Math.PI * t);
+                const tz = 0;
+                return new THREE.Vector3(tx, ty, tz).multiplyScalar(this.scale);
+            }
         }
 
         main();

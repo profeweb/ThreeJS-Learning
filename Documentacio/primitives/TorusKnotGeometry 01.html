@@ -9,15 +9,13 @@
     <script type="importmap">
     {
       "imports": {
-        "three": "https://unpkg.com/three@0.147.0/build/three.module.js",
-        "three/addons/": "https://unpkg.com/three@0.147.0/examples/jsm/"
+        "three": "https://unpkg.com/three@0.147.0/build/three.module.js"
       }
     }
     </script>
 
     <script type="module">
         import * as THREE from 'three';
-        import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 
         function main() {
             const canvas = document.querySelector('#c');
@@ -38,22 +36,13 @@
             light.position.set(-1, 2, 4);
             scene.add(light);
 
-            const loader = new FontLoader();
-
-            loader.load( '../resources/fonts/helvetiker_regular.typeface.json', function ( font ) {
-
-                const geometry = new TextGeometry( 'Hello three.js!', {
-                    font: font,
-                    size: 80,
-                    height: 5,
-                    curveSegments: 12,
-                    bevelEnabled: true,
-                    bevelThickness: 10,
-                    bevelSize: 8,
-                    bevelOffset: 0,
-                    bevelSegments: 5
-                } );
-            } );
+            const radius = 3;
+            const tubeRadius = 1.5;
+            const radialSegments = 8;
+            const tubularSegments = 64;
+            const p = 2;
+            const q = 3;
+            const geometry = new THREE.TorusKnotGeometry(radius, tubeRadius, tubularSegments, radialSegments, p, q);
 
 
             const material = new THREE.MeshPhongMaterial({color: 0x44aa88});
