@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic ThreeJS</title>
+    <!-- Remove this when import maps will be widely supported -->
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script  type="importmap">{
+        "imports": {
+            "three": "https://threejs.org/build/three.module.js"
+        }
+    }</script>
+    <script type="module" src="script.js"></script>
+    <style>
+        body {
+            font-size: 16pt;
+        }
+        #c {
+            float: left;
+            padding: 5px;
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Donec laoreet
+        maximus metus, a interdum massa faucibus id.  Pellentesque in mauris elit.
+        Vestibulum quis consectetur nisi.<canvas id="c" data-engine="three.js r148" width="210" height="160"></canvas> Nulla pellentesque, sapien in
+        condimentum ullamcorper, mi nisl sollicitudin felis, a ullamcorper sapien
+        dui vel metus.  Nam augue nisi, elementum id diam vel, blandit imperdiet
+        nunc.  Vivamus facilisis imperdiet neque id porttitor.  Mauris sapien
+        felis, mollis tempus orci vitae, sollicitudin varius augue.  Nullam non
+        magna id sem faucibus sollicitudin.  Proin nunc mi, rutrum et elementum
+        ut, auctor eget massa.
+    </p>
+</body>
+</html>
