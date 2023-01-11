@@ -39,7 +39,12 @@
             const radius = 1;
             const height = 2;
             const radialSegments = 16;
-            const geometry = new THREE.ConeGeometry(radius, height, radialSegments);
+            const heightSegments = 2;
+            const openEnded = true;
+            const thetaStart = Math.PI * 0.25;
+            const thetaLength = Math.PI * 1.5;
+            const geometry = new THREE.ConeGeometry(radius, height, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+
 
             const material = new THREE.MeshPhongMaterial({color: 0x44aa88});
             material.side = THREE.DoubleSide;
