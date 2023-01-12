@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/05-transform-objects.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/fundamentals/helloBox/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/fundamentals/helloBox/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/primitives/Primitives 01.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/primitives/Primitives 01.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,16 +33,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/escenografia",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/escenografia&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\escenografia" />
@@ -76,7 +80,10 @@
       <workItem from="1673250299886" duration="96000" />
       <workItem from="1673371565968" duration="3857000" />
       <workItem from="1673422286340" duration="7739000" />
-      <workItem from="1673430244914" duration="11614000" />
+      <workItem from="1673430244914" duration="12535000" />
+      <workItem from="1673452662211" duration="8269000" />
+      <workItem from="1673543353035" duration="86000" />
+      <workItem from="1673544296312" duration="732000" />
     </task>
     <task id="LOCAL-00001" summary="ThreeJS">
       <created>1672936419332</created>
@@ -281,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673439571580</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="ThreeJS">
+      <created>1673442687251</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1673442687251</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -2,6 +2,7 @@
 // Test ThreeJS Loaded
 console.log(THREE);
 
+
 // Canvas
 const canvas = document.querySelector( '#c' );
 
@@ -37,3 +38,4 @@ scene.add(cube);
 
 // Renderitzar l'escena amb la camera
 renderer.render(scene, camera);
+
