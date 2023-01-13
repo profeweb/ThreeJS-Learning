@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/03-basic-scene/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/03-basic-scene/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/03-basic-scene/three.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/07b-camera rotation/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/07b-camera rotation/src/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/07b-camera rotation/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/07c-camera orbit/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/07c-camera orbit/src/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/07c-camera orbit/src/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/07-cameras/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/07-cameras/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,24 +37,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/escenografia&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\escenografia" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\primitives" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\fundamentals" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\fundamentals\helloBox" />
-      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\fundamentals\helloBoxModule" />
@@ -84,7 +88,7 @@
       <workItem from="1673452662211" duration="8269000" />
       <workItem from="1673543353035" duration="86000" />
       <workItem from="1673544296312" duration="2313000" />
-      <workItem from="1673598398781" duration="3834000" />
+      <workItem from="1673598398781" duration="4915000" />
     </task>
     <task id="LOCAL-00001" summary="ThreeJS">
       <created>1672936419332</created>
@@ -373,7 +377,35 @@
       <option name="project" value="LOCAL" />
       <updated>1673601278890</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="ThreeJS">
+      <created>1673605437003</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1673605437003</updated>
+    </task>
+    <task id="LOCAL-00043" summary="ThreeJS">
+      <created>1673605464746</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1673605464746</updated>
+    </task>
+    <task id="LOCAL-00044" summary="ThreeJS">
+      <created>1673605621664</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1673605621664</updated>
+    </task>
+    <task id="LOCAL-00045" summary="ThreeJS">
+      <created>1673605652069</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1673605652069</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
