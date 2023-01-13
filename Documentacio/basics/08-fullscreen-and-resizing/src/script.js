@@ -23,9 +23,42 @@ scene.add(mesh)
  * Sizes
  */
 const sizes = {
-    width: 800,
-    height: 600
+    width: window.innerWidth,
+    height: window.innerHeight
 }
+
+/** Resize Event **/
+window.addEventListener('resize', ()=>{
+
+    // New dimensions
+    console.log('Window resized')
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+
+    // Update camera
+    camera.aspect = sizes.width / sizes.height
+    camera.updateProjectionMatrix()
+
+    // Update renderer (size & pixel ratio -pantalla extesa-)
+    renderer.setSize(sizes.width, sizes.height)
+    //renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+})
+
+/** Double Click Event **/
+window.addEventListener('dblclick', ()=>{
+    console.log(' Double click')
+    if(!document.fullscreenElement){
+        console.log('GO FullScreen')
+        canvas.requestFullscreen()
+    }
+    else {
+        console.log('EXIT FullScreen')
+        document.exitFullscreen()
+    }
+})
+
+// Pixel ratio del dispositiu
+console.log(window.devicePixelRatio)
 
 /**
  * Camera
@@ -37,6 +70,7 @@ scene.add(camera)
 
 // Controls
 const controls = new OrbitControls(camera, canvas)
+//controls.enabled = false
 controls.enableDamping = true
 
 /**
@@ -46,6 +80,7 @@ const renderer = new THREE.WebGLRenderer({
     canvas: canvas
 })
 renderer.setSize(sizes.width, sizes.height)
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 /**
  * Animate
