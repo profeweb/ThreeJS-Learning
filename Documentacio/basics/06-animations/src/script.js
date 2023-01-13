@@ -30,7 +30,6 @@ const renderer = new THREE.WebGLRenderer({
     canvas: canvas
 })
 renderer.setSize(sizes.width, sizes.height)
-//
 
 /**
  * Opcions d'Animació (Date, Clock, GSAP)
@@ -74,7 +73,6 @@ const tick2 = () =>
 
     // Render
     renderer.render(scene, camera)
-
     window.requestAnimationFrame(tick2)
 }
 
@@ -91,7 +89,6 @@ const tick3 = () =>
 
     // Render
     renderer.render(scene, camera)
-
     window.requestAnimationFrame(tick3)
 }
 
