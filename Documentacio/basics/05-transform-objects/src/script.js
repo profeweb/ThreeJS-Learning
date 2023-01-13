@@ -8,13 +8,15 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 /**
- * Objects
+ * Objectes
  */
 const geometry = new THREE.BoxGeometry(1, 1, 1)
 const material = new THREE.MeshBasicMaterial({ color: 0xff0000 })
 const mesh = new THREE.Mesh(geometry, material)
 //scene.add(mesh)
 
+
+// Grup d'Objectes
 const group = new THREE.Group();
 scene.add(group);
 
@@ -38,6 +40,7 @@ const cube3 = new THREE.Mesh(
 cube3.position.x = +2
 group.add(cube3);
 
+// Transformacions a nivell de grup
 group.position.set(0,2,0)
 group.scale.set(1, 3, 1)
 group.rotation.y = Math.PI * 0.25
@@ -47,6 +50,8 @@ group.rotation.y = Math.PI * 0.25
 const axesHelper = new THREE.AxesHelper(3);
 scene.add(axesHelper);
 
+
+// Transformacions a nivell d'Objecte (Mesh)
 // POSITION
 mesh.position.x = 0.7
 mesh.position.y = - 0.6
