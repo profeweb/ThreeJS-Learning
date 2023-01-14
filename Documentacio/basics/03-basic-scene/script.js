@@ -16,6 +16,7 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
     color: '#ff0000'
 })
 const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
+cubeMesh.position.x = 2
 scene.add(cubeMesh)
 
 // Camera
