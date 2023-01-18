@@ -120,7 +120,7 @@ window.addEventListener('dblclick', () =>
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(60, sizes.width / sizes.height, 0.1, 100)
 camera.position.z = 3
 scene.add(camera)
 
@@ -153,10 +153,12 @@ const tick = () =>
         element.rotation.z = elapsedTime * (index+1)/10
     })
 
-    // Update light
+    // Update lights
     pointLight.position.x = Math.sin(elapsedTime)*5
     pointLight.position.z = Math.cos(elapsedTime)*5
     pointLight.position.y = Math.sin(elapsedTime/10)*3
+
+    ambientLight.intensity = Math.abs(Math.sin(elapsedTime))
 
     // Update controls
     controls.update()
