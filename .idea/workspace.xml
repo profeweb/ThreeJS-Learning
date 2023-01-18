@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/src/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/static/textures/checkerboard-1024x1024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/static/textures/checkerboard-8x8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/static/textures/door/alpha.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/static/textures/door/ambientOcclusion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/static/textures/door/color.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/static/textures/door/height.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/static/textures/door/metalness.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/static/textures/door/normal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/static/textures/door/roughness.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/11-textures/static/textures/minecraft.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,14 +97,7 @@
       <workItem from="1673632110992" duration="7628000" />
       <workItem from="1673639879689" duration="56000" />
       <workItem from="1673684654899" duration="705000" />
-      <workItem from="1674026002748" duration="6999000" />
-    </task>
-    <task id="LOCAL-00007" summary="ThreeJS">
-      <created>1673423536057</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1673423536057</updated>
+      <workItem from="1674026002748" duration="8458000" />
     </task>
     <task id="LOCAL-00008" summary="ThreeJS">
       <created>1673423738951</created>
@@ -434,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674033824369</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="ThreeJS">
+      <created>1674034026016</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1674034026016</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
