@@ -16,7 +16,7 @@ const sizes = {
 // Scene
 const scene = new THREE.Scene()
 
-// Object
+// Object(s)
 const mesh = new THREE.Mesh(
     new THREE.BoxGeometry(1, 1, 1, 5, 5, 5),
     new THREE.MeshBasicMaterial({ color: 0xff0000 })
