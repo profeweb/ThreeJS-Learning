@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/bundler/webpack.common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/bundler/webpack.dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/bundler/webpack.prod.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/src/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/static/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/12-materials/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/12-materials/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,24 +40,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics/11-textures/src&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/activitats",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\activitats" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\11-textures\src" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\escenografia" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\primitives" />
-      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\fundamentals" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\fundamentals\helloBoxModule" />
@@ -93,14 +102,7 @@
       <workItem from="1674046599167" duration="1788000" />
       <workItem from="1674057404606" duration="10390000" />
       <workItem from="1674127587796" duration="507000" />
-      <workItem from="1674145769382" duration="7821000" />
-    </task>
-    <task id="LOCAL-00014" summary="ThreeJS">
-      <created>1673428707716</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1673428707716</updated>
+      <workItem from="1674145769382" duration="9893000" />
     </task>
     <task id="LOCAL-00015" summary="ThreeJS">
       <created>1673428840026</created>
@@ -438,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674145963445</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="ThreeJS">
+      <created>1674210622130</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1674210622130</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
