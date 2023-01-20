@@ -2,6 +2,8 @@ import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'lil-gui'
+import {FontLoader} from "three/examples/jsm/loaders/FontLoader";
+import {TextGeometry} from "three/examples/jsm/geometries/TextGeometry";
 
 /**
  * Base
@@ -15,10 +17,55 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
+// Axes Helper
+const axesHelper = new THREE.AxesHelper()
+scene.add(axesHelper)
+
 /**
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
+
+
+/**
+ * Fonts
+ */
+const fontLoader = new FontLoader()
+fontLoader.load(
+    '/fonts/helvetiker_regular.typeface.json',
+    (font) =>{
+        console.log('Font loaded', font)
+        const textGeometry = new TextGeometry(
+            'Hello Three.js',
+            {
+                font: font,
+                size: 0.5,
+                height: 0.2,
+                curveSegments: 5,
+                bevelEnabled: true,
+                bevelThickness: 0.03,
+                bevelSize: 0.02,
+                bevelOffset: 0,
+                bevelSegments: 4
+            }
+        )
+
+        // Genera la bounding box del text
+        textGeometry.computeBoundingBox()
+        console.log(textGeometry.boundingBox)
+        textGeometry.translate(
+            -textGeometry.boundingBox.max.x * 0.5,
+            -textGeometry.boundingBox.max.y * 0.5,
+            -textGeometry.boundingBox.max.z * 0.5,
+        )
+
+        const textMaterial = new THREE.MeshBasicMaterial({
+            wireframe: true
+        })
+        const text = new THREE.Mesh(textGeometry, textMaterial)
+        scene.add(text)
+    }
+)
 
 /**
  * Object
@@ -28,7 +75,7 @@ const cube = new THREE.Mesh(
     new THREE.MeshBasicMaterial()
 )
 
-scene.add(cube)
+//scene.add(cube)
 
 /**
  * Sizes
