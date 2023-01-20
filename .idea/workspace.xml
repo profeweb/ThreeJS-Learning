@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/bundler/webpack.common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/bundler/webpack.dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/bundler/webpack.prod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/src/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/src/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena basica/static/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/activitats/act01-escena basica/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act01-escena basica/src/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/activitats/act02-escena animada/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act02-escena animada/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,21 +94,7 @@
       <workItem from="1674046599167" duration="1788000" />
       <workItem from="1674057404606" duration="10390000" />
       <workItem from="1674127587796" duration="507000" />
-      <workItem from="1674145769382" duration="9893000" />
-    </task>
-    <task id="LOCAL-00015" summary="ThreeJS">
-      <created>1673428840026</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1673428840026</updated>
-    </task>
-    <task id="LOCAL-00016" summary="ThreeJS">
-      <created>1673430267120</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1673430267120</updated>
+      <workItem from="1674145769382" duration="10218000" />
     </task>
     <task id="LOCAL-00017" summary="ThreeJS">
       <created>1673431098027</created>
@@ -447,7 +425,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674210622130</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="ThreeJS">
+      <created>1674212986744</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1674212986744</updated>
+    </task>
+    <task id="LOCAL-00065" summary="ThreeJS">
+      <created>1674213038367</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1674213038367</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

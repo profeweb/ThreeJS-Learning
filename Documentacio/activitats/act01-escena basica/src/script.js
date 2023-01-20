@@ -140,25 +140,10 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 /**
  * Animate
  */
-const clock = new THREE.Clock()
 
 const tick = () =>
 {
-    const elapsedTime = clock.getElapsedTime()
 
-    // Update objects
-    meshes.forEach((element, index, array)=>{
-        element.rotation.y = elapsedTime * (index+1)/10
-        element.rotation.x = elapsedTime * (index+1)/10
-        element.rotation.z = elapsedTime * (index+1)/10
-    })
-
-    // Update lights
-    pointLight.position.x = Math.sin(elapsedTime)*5
-    pointLight.position.z = Math.cos(elapsedTime)*5
-    pointLight.position.y = Math.sin(elapsedTime/10)*3
-
-    ambientLight.intensity = Math.abs(Math.sin(elapsedTime))
 
     // Update controls
     controls.update()
