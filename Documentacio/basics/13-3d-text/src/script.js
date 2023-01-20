@@ -25,6 +25,7 @@ scene.add(axesHelper)
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
+const matcapTexture = textureLoader.load('textures/matcaps/1.png')
 
 
 /**
@@ -50,17 +51,26 @@ fontLoader.load(
             }
         )
 
-        // Genera la bounding box del text
+        // Calcula la bounding box del text
         textGeometry.computeBoundingBox()
         console.log(textGeometry.boundingBox)
+        // Centra el text
         textGeometry.translate(
-            -textGeometry.boundingBox.max.x * 0.5,
-            -textGeometry.boundingBox.max.y * 0.5,
-            -textGeometry.boundingBox.max.z * 0.5,
+            -(textGeometry.boundingBox.max.x-0.02) * 0.5,
+            -(textGeometry.boundingBox.max.y-0.02) * 0.5,
+            -(textGeometry.boundingBox.max.z -0.03) * 0.5,
         )
 
-        const textMaterial = new THREE.MeshBasicMaterial({
-            wireframe: true
+        // Recalcula la bounding box del text
+        textGeometry.computeBoundingBox()
+        console.log(textGeometry.boundingBox)
+
+        //
+        textGeometry.center()
+
+        //const textMaterial = new THREE.MeshBasicMaterial({wireframe: true,})
+        const textMaterial = new THREE.MeshMatcapMaterial({
+            matcap: matcapTexture
         })
         const text = new THREE.Mesh(textGeometry, textMaterial)
         scene.add(text)
