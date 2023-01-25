@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/activitats/act03-escena controls/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act03-escena controls/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/activitats/act03-escena controls/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act03-escena controls/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentacio/activitats/act03-escena controls/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act03-escena controls/src/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp11/src/color.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,14 +98,7 @@
       <workItem from="1674458777418" duration="663000" />
       <workItem from="1674560894830" duration="33000" />
       <workItem from="1674630163295" duration="2554000" />
-      <workItem from="1674635640103" duration="1800000" />
-    </task>
-    <task id="LOCAL-00023" summary="ThreeJS">
-      <created>1673435243832</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1673435243832</updated>
+      <workItem from="1674635640103" duration="2059000" />
     </task>
     <task id="LOCAL-00024" summary="ThreeJS">
       <created>1673436538368</created>
@@ -446,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674635489234</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="ThreeJS">
+      <created>1674637507161</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1674637507161</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -146,24 +146,24 @@ fl.add(pointLight, 'intensity').name('PointLight Intensity').min(0).max(1).step(
 const resetObjectes = {
     objectRotation: true,
     randomScale: () => {
-        for(let i=0; i<meshes.length; i++){
+        meshes.forEach((mesh, index, array)=>{
             const scale = Math.random()
-            meshes[i].scale.set(scale, scale, scale)
-        }
+            mesh.scale.set(scale, scale, scale)
+        })
     },
     randomPosition: () => {
-        for(let i=0; i<meshes.length; i++){
-            meshes[i].position.set(Math.random()*5 -2.5, Math.random()*5 -2.5,Math.random()*5 -2.5)
-        }
+        meshes.forEach((mesh, index, array)=>{
+            mesh.position.set(Math.random()*5 -2.5, Math.random()*5 -2.5,Math.random()*5 -2.5)
+        })
     },
     randomColor: () => {
-        for(let i=0; i<meshes.length; i++){
+        meshes.forEach((mesh, index, array)=>{
             const r = Math.floor(Math.random()*256)
             const g = Math.floor(Math.random()*256)
             const b = Math.floor(Math.random()*256)
             const color = new THREE.Color("rgb("+r+","+g+","+b+")");
-            meshes[i].material.color = color;
-        }
+            mesh.material.color = color;
+        })
     }
 }
 
