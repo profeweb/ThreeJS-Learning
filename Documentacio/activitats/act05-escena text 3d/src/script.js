@@ -30,7 +30,11 @@ for(let i=1; i<=8; i++) {
  */
 const meshes = []
 const paraules = ['hello', 'hola', 'uep', 'ciao', 'bye']
-const fonts = ['/fonts/Purple Smile_Regular.json', '/fonts/Purple Smile_Regular.json'];
+const fonts = [ '/fonts/gentilis_regular.typeface.json',
+                '/fonts/helvetiker_regular.typeface.json',
+                '/fonts/optimer_regular.typeface.json',
+                '/fonts/Purple Smile_Regular.json',
+];
 
 /**
  * Fonts
@@ -71,9 +75,12 @@ for(let i=0; i<25; i++) {
             const n = Math.floor(Math.random()*matcapTextures.length)
             const textMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTextures[n]})
             const text = new THREE.Mesh(textGeometry, textMaterial)
-            // POSICIONAR
+
+            // Posicionar
             text.geometry.center()
             text.position.set(Math.random()*5 -2.5, Math.random()*5 -2.5,Math.random()*5 -2.5)
+
+            // Afegir a l'escena i a l'array de malles
             scene.add(text)
             meshes.push(text)
         }
