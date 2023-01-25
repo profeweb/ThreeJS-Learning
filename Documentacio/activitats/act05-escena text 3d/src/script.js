@@ -52,6 +52,7 @@ for(let i=0; i<25; i++) {
     const nf = Math.floor(Math.random()*fonts.length)
     const font = fonts[nf];
 
+    // Càrrega de Fonts i creació de Textos
     fontLoader.load(
         font,
         (font) =>{
@@ -60,7 +61,7 @@ for(let i=0; i<25; i++) {
                 paraula,
                 {
                     font: font,
-                    size: Math.random() + 0.1,
+                    size: Math.random() + 0.5,
                     height: 0.2,
                     curveSegments: 5,
                     bevelEnabled: true,

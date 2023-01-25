@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/static/fonts/gentilis_regular.typeface.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/static/fonts/optimer_regular.typeface.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/activitats/act03-escena controls/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act03-escena controls/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/activitats/act04-escena materials/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act04-escena materials/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,14 +100,7 @@
       <workItem from="1674635640103" duration="2620000" />
       <workItem from="1674638629065" duration="1518000" />
       <workItem from="1674641399530" duration="2372000" />
-      <workItem from="1674659337053" duration="852000" />
-    </task>
-    <task id="LOCAL-00030" summary="ThreeJS">
-      <created>1673442687251</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1673442687251</updated>
+      <workItem from="1674659337053" duration="994000" />
     </task>
     <task id="LOCAL-00031" summary="ThreeJS">
       <created>1673546580286</created>
@@ -451,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674648306724</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="ThreeJS">
+      <created>1674660220065</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1674660220066</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
