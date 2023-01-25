@@ -1,6 +1,7 @@
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import * as dat from 'lil-gui'
 
 /**
  * Base
@@ -128,6 +129,51 @@ const controls = new OrbitControls(camera, canvas)
 controls.enableDamping = true
 
 /**
+ * GUI Controls
+ */
+
+const gui = new dat.GUI()
+const fs = gui.addFolder('SCENE')
+fs.addColor(scene, 'background').name('Background Color')
+const fc = gui.addFolder('CAMERA')
+fc.add(camera.position, 'x').min(- 3).max(3).step(0.01)
+fc.add(camera.position, 'y').min(- 3).max(3).step(0.01)
+fc.add(camera.position, 'z').min(0).max(10).step(0.01)
+const fl = gui.addFolder('LIGHTS')
+fl.addColor(ambientLight, 'color').name('Ambient Color')
+fl.add(pointLight, 'intensity').name('PointLight Intensity').min(0).max(1).step(0.01)
+
+const resetObjectes = {
+    objectRotation: true,
+    randomScale: () => {
+        for(let i=0; i<meshes.length; i++){
+            const scale = Math.random()
+            meshes[i].scale.set(scale, scale, scale)
+        }
+    },
+    randomPosition: () => {
+        for(let i=0; i<meshes.length; i++){
+            meshes[i].position.set(Math.random()*5 -2.5, Math.random()*5 -2.5,Math.random()*5 -2.5)
+        }
+    },
+    randomColor: () => {
+        for(let i=0; i<meshes.length; i++){
+            const r = Math.floor(Math.random()*256)
+            const g = Math.floor(Math.random()*256)
+            const b = Math.floor(Math.random()*256)
+            const color = new THREE.Color("rgb("+r+","+g+","+b+")");
+            meshes[i].material.color = color;
+        }
+    }
+}
+
+const fo = gui.addFolder('OBJECTS')
+fo.add(resetObjectes, 'objectRotation')
+fo.add(resetObjectes, 'randomScale').name('Re-SCALE')
+fo.add(resetObjectes, 'randomPosition').name('Re-POSITION')
+fo.add(resetObjectes, 'randomColor').name('Re-COLOR')
+
+/**
  * Renderer
  */
 const renderer = new THREE.WebGLRenderer({
@@ -146,11 +192,13 @@ const tick = () =>
     const elapsedTime = clock.getElapsedTime()
 
     // Update objects
-    meshes.forEach((element, index, array)=>{
-        element.rotation.y = elapsedTime * (index+1)/10
-        element.rotation.x = elapsedTime * (index+1)/10
-        element.rotation.z = elapsedTime * (index+1)/10
-    })
+    if(resetObjectes.objectRotation) {
+        meshes.forEach((element, index, array) => {
+            element.rotation.y = elapsedTime * (index + 1) / 10
+            element.rotation.x = elapsedTime * (index + 1) / 10
+            element.rotation.z = elapsedTime * (index + 1) / 10
+        })
+    }
 
     // Update lights
     pointLight.position.x = Math.sin(elapsedTime)*5
