@@ -14,6 +14,16 @@ const scene = new THREE.Scene()
 scene.background = new THREE.Color('rgb(5, 10, 20)')
 
 /**
+ * Textures
+ */
+const loadingManager = new THREE.LoadingManager()
+const textureLoader = new THREE.TextureLoader(loadingManager)
+const matcapTextures = []
+for(let i=1; i<=8; i++) {
+    matcapTextures.push( textureLoader.load('textures/matcaps/'+i+'.png'))
+}
+
+/**
  * Objectes
  */
 const meshes = []
@@ -37,14 +47,14 @@ for(let i=0; i<25; i++) {
         default:
             geometry = new THREE.SphereGeometry(Math.random() * 0.5, 4, 8)
     }
-    // Color aleatori
-    const r = Math.floor(Math.random()*256)
-    const g = Math.floor(Math.random()*256)
-    const b = Math.floor(Math.random()*256)
-    const color = new THREE.Color("rgb("+r+","+g+","+b+")");
-    const material = new THREE.MeshPhongMaterial({color: color})
 
+    // Matcap aleatori
+    const n = Math.floor(Math.random()*matcapTextures.length)
+    const material = new THREE.MeshMatcapMaterial({ matcap: matcapTextures[n]})
+
+    // Malla ( Geometria + Material)
     const mesh = new THREE.Mesh(geometry, material)
+
     // Posició aleatòria
     mesh.position.set(Math.random()*5 -2.5, Math.random()*5 -2.5,Math.random()*5 -2.5)
     meshes.push(mesh)
@@ -156,13 +166,12 @@ const resetObjectes = {
             mesh.position.set(Math.random()*5 -2.5, Math.random()*5 -2.5,Math.random()*5 -2.5)
         })
     },
-    randomColor: () => {
+    randomMaterial: () => {
         meshes.forEach((mesh, index, array)=>{
-            const r = Math.floor(Math.random()*256)
-            const g = Math.floor(Math.random()*256)
-            const b = Math.floor(Math.random()*256)
-            const color = new THREE.Color("rgb("+r+","+g+","+b+")");
-            mesh.material.color = color;
+            // Matcap aleatori
+            const n = Math.floor(Math.random()*matcapTextures.length)
+            const material = new THREE.MeshMatcapMaterial({ matcap: matcapTextures[n]})
+            mesh.material = material;
         })
     }
 }
@@ -171,7 +180,7 @@ const fo = gui.addFolder('OBJECTS')
 fo.add(resetObjectes, 'objectRotation')
 fo.add(resetObjectes, 'randomScale').name('Re-SCALE')
 fo.add(resetObjectes, 'randomPosition').name('Re-POSITION')
-fo.add(resetObjectes, 'randomColor').name('Re-COLOR')
+fo.add(resetObjectes, 'randomMaterial').name('Re-MATERIAL')
 
 /**
  * Renderer
