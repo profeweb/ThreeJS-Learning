@@ -1,6 +1,8 @@
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import {FontLoader} from "three/examples/jsm/loaders/FontLoader";
+import {TextGeometry} from "three/examples/jsm/geometries/TextGeometry";
 import * as dat from 'lil-gui'
 
 /**
@@ -27,38 +29,55 @@ for(let i=1; i<=8; i++) {
  * Objectes
  */
 const meshes = []
+const paraules = ['hello', 'hola', 'uep', 'ciao', 'bye']
+const fonts = ['/fonts/Purple Smile_Regular.json', '/fonts/Purple Smile_Regular.json'];
 
-// 25 geometries diferents
+/**
+ * Fonts
+ */
+const fontLoader = new FontLoader()
+
+// 25 textos diferents
 for(let i=0; i<25; i++) {
-    let geometry;
-    switch(i%5){
-        case 0:
-            geometry = new THREE.BoxGeometry(0.25, 0.25, 0.25)
-            break
-        case 1:
-            geometry = new THREE.ConeGeometry(0.15, 0.5, 5)
-            break
-        case 2:
-            geometry = new THREE.TorusGeometry( 0.5, 0.15, 16, 10);
-            break
-        case 3:
-            geometry = new THREE.CylinderGeometry( 0.5, 0.15, 1, 10);
-            break
-        default:
-            geometry = new THREE.SphereGeometry(Math.random() * 0.5, 4, 8)
-    }
 
-    // Matcap aleatori
-    const n = Math.floor(Math.random()*matcapTextures.length)
-    const material = new THREE.MeshMatcapMaterial({ matcap: matcapTextures[n]})
+    // Paraula
+    const np = Math.floor(Math.random()*paraules.length)
+    const paraula = paraules[np];
 
-    // Malla ( Geometria + Material)
-    const mesh = new THREE.Mesh(geometry, material)
+    // URL Font
+    const nf = Math.floor(Math.random()*fonts.length)
+    const font = fonts[nf];
 
-    // Posició aleatòria
-    mesh.position.set(Math.random()*5 -2.5, Math.random()*5 -2.5,Math.random()*5 -2.5)
-    meshes.push(mesh)
-    scene.add(mesh)
+    fontLoader.load(
+        font,
+        (font) =>{
+            console.log('Font loaded', font)
+            const textGeometry = new TextGeometry(
+                paraula,
+                {
+                    font: font,
+                    size: Math.random() + 0.1,
+                    height: 0.2,
+                    curveSegments: 5,
+                    bevelEnabled: true,
+                    bevelThickness: 0.03,
+                    bevelSize: 0.02,
+                    bevelOffset: 0,
+                    bevelSegments: 4
+                }
+            )
+
+            // Matcap aleatori
+            const n = Math.floor(Math.random()*matcapTextures.length)
+            const textMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTextures[n]})
+            const text = new THREE.Mesh(textGeometry, textMaterial)
+            // POSICIONAR
+            text.geometry.center()
+            text.position.set(Math.random()*5 -2.5, Math.random()*5 -2.5,Math.random()*5 -2.5)
+            scene.add(text)
+            meshes.push(text)
+        }
+    )
 }
 
 /**
