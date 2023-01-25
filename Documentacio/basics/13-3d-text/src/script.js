@@ -25,7 +25,8 @@ scene.add(axesHelper)
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
-const matcapTexture = textureLoader.load('textures/matcaps/1.png')
+const matcapTexture = textureLoader.load('textures/matcaps/6.png')
+const matcapTexture2 = textureLoader.load('textures/matcaps/6.png')
 
 
 /**
@@ -51,6 +52,9 @@ fontLoader.load(
             }
         )
 
+        // CENTRAR
+
+        // OPCIÓ 1: amb Bounding Box
         // Calcula la bounding box del text
         textGeometry.computeBoundingBox()
         console.log(textGeometry.boundingBox)
@@ -65,7 +69,7 @@ fontLoader.load(
         textGeometry.computeBoundingBox()
         console.log(textGeometry.boundingBox)
 
-        //
+        //OPCIÓ 2: amb center
         textGeometry.center()
 
         //const textMaterial = new THREE.MeshBasicMaterial({wireframe: true,})
@@ -74,6 +78,37 @@ fontLoader.load(
         })
         const text = new THREE.Mesh(textGeometry, textMaterial)
         scene.add(text)
+
+        // Temps START
+        console.time('DONUTS')
+
+        const donutGeometry = new THREE.TorusBufferGeometry(0.3, 0.2, 20, 45)
+        const donutMaterial = new THREE.MeshMatcapMaterial({matcap: matcapTexture2})
+
+        // 100 Donuts
+        for(let i=0; i<100; i++){
+            //const donutGeometry = new THREE.TorusBufferGeometry(0.3, 0.2, 20, 45)
+            //const donutMaterial = new THREE.MeshMatcapMaterial({matcap: matcapTexture})
+            const donut = new THREE.Mesh(donutGeometry, donutMaterial)
+
+            //Posició aleatòria
+            donut.position.x = (Math.random() -0.5) * 10
+            donut.position.y = (Math.random() -0.5) * 10
+            donut.position.z = (Math.random() -0.5) * 10
+
+            // Rotació aleatòria
+            donut.rotation.x = Math.random() * Math.PI
+            donut.rotation.y = Math.random() * Math.PI
+
+            // Escala aleatòria
+            const scale = Math.random()
+            donut.scale.set( scale, scale, scale)
+
+            scene.add(donut)
+        }
+
+        // Temps FINAL
+        console.timeEnd('DONUTS')
     }
 )
 
