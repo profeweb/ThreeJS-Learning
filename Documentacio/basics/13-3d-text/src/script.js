@@ -34,7 +34,8 @@ const matcapTexture2 = textureLoader.load('textures/matcaps/6.png')
  */
 const fontLoader = new FontLoader()
 fontLoader.load(
-    '/fonts/helvetiker_regular.typeface.json',
+    '/fonts/Purple Smile_Regular.json',
+    //'/fonts/helvetiker_regular.typeface.json',
     (font) =>{
         console.log('Font loaded', font)
         const textGeometry = new TextGeometry(
