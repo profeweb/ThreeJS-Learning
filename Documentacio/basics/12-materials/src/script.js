@@ -104,7 +104,7 @@ scene.add(ambientLight, pointLight)
 
 // MeshStandardMaterial ///////////////////////////////////////////////////
 // (8.1) Per defecte
-//const material = new THREE.MeshStandardMaterial()
+const material = new THREE.MeshStandardMaterial()
 // (8.2) Amb metalness i roughness
 //material.metalness = 0.45
 //material.roughness = 0.65
@@ -113,36 +113,38 @@ scene.add(ambientLight, pointLight)
 //gui.add(material, 'metalness').min(0).max(1).step(0.0001)
 //gui.add(material, 'roughness').min(0).max(1).step(0.0001)
 // (8.4) Amb map
-//material.map = doorColorTexture
+material.map = doorColorTexture
 // (8.5) Amb Ambient Occlusion map
-//material.aoMap = doorAmbientOcclusionTexture
-//material.aoMapIntensity = 1
+material.aoMap = doorAmbientOcclusionTexture
+material.aoMapIntensity = 1
 //gui.add(material, 'aoMapIntensity').min(0).max(10).step(0.0001)
 // (8.6) Amb Displacement map
-//material.displacementMap = doorHeightTexture
-//material.displacementScale = 0.05
+material.displacementMap = doorHeightTexture
+material.displacementScale = 0.05
 //gui.add(material, 'displacementScale').min(0).max(1).step(0.0001)
 // (8.7) Amb Metalness map
-//material.metalness = 0
-//material.roughness = 1
-//material.metalnessMap = doorMetalnessTexture
-//material.roughnessMap = doorRoughnessTexture
+material.metalness = 0
+material.roughness = 1
+material.metalnessMap = doorMetalnessTexture
+material.roughnessMap = doorRoughnessTexture
 // (8.8) Amb Normal map
-//material.normalMap = doorNormalTexture
-//material.normalScale.set(0.5, 0.5)
+material.normalMap = doorNormalTexture
+material.normalScale.set(0.5, 0.5)
 // (8.9) Amb Alpha map
-//material.alphaMap = doorAlphaTexture
-//material.transparent = true
+material.alphaMap = doorAlphaTexture
+material.transparent = true
 
 // EnvironmentMap amb MeshStandardMaterial ///////////////////////////////////////////////////
 // (9.1) Amb metalness i Roughness
-const material = new THREE.MeshStandardMaterial()
+/*const material = new THREE.MeshStandardMaterial()
 material.metalness = 0.7
 material.roughness = 0.2
 const gui = new dat.GUI()
 gui.add(material, 'metalness').min(0).max(1).step(0.0001)
 gui.add(material, 'roughness').min(0).max(1).step(0.0001)
 material.envMap = environmentMapTexture
+
+ */
 
 ////////////////////////////////////////////////////////////////////////////
 
