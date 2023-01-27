@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/nx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/ny.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/nz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/py.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/pz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/temp13/static/fonts/helvetiker_regular.typeface.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/starterWebpackThreeJS.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/12-materials/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/12-materials/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,13 +105,10 @@
       <workItem from="1674662398496" duration="10535000" />
       <workItem from="1674676922349" duration="980000" />
       <workItem from="1674733612895" duration="14000" />
-    </task>
-    <task id="LOCAL-00032" summary="ThreeJS">
-      <created>1673547440504</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1673547440504</updated>
+      <workItem from="1674751705201" duration="1445000" />
+      <workItem from="1674808440039" duration="702000" />
+      <workItem from="1674814888812" duration="23000" />
+      <workItem from="1674838008366" duration="2415000" />
     </task>
     <task id="LOCAL-00033" summary="ThreeJS">
       <created>1673547488281</created>
@@ -456,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674660459153</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="ThreeJS">
+      <created>1674752092273</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1674752092273</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
