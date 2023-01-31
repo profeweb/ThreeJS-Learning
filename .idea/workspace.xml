@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/static/fonts/Angon_Regular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/bundler/webpack.common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/bundler/webpack.dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/bundler/webpack.prod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/src/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/src/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/fonts/Purple Smile_Regular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/fonts/gentilis_regular.typeface.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/fonts/optimer_regular.typeface.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/src/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/nx.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/ny.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/nz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/py.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/pz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp13/static/fonts/helvetiker_regular.typeface.json" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/fonts/helvetiker_regular.typeface.json" afterDir="false" />
-    </list>
+    <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,13 +107,7 @@
       <workItem from="1674814888812" duration="23000" />
       <workItem from="1674838008366" duration="8945000" />
       <workItem from="1674902055215" duration="21000" />
-    </task>
-    <task id="LOCAL-00034" summary="ThreeJS">
-      <created>1673599934525</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1673599934525</updated>
+      <workItem from="1675180662616" duration="344000" />
     </task>
     <task id="LOCAL-00035" summary="ThreeJS">
       <created>1673600113920</created>
@@ -483,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674842169355</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="ThreeJS">
+      <created>1675180911547</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1675180911547</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
