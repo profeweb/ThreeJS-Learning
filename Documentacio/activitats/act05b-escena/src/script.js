@@ -18,76 +18,86 @@ scene.background = new THREE.Color('rgb(5, 10, 20)')
 /**
  * Textures
  */
-const loadingManager = new THREE.LoadingManager()
-const textureLoader = new THREE.TextureLoader(loadingManager)
+const manager = new THREE.LoadingManager()
+const textureLoader = new THREE.TextureLoader(manager)
 const matcapTextures = []
 for(let i=1; i<=8; i++) {
     matcapTextures.push( textureLoader.load('textures/matcaps/'+i+'.png'))
 }
 
 /**
- * Objectes
+ * Fonts
  */
 const meshes = []
-const paraules = ['hello', 'hola', 'uep', 'ciao', 'bye']
-const fonts = [ '/fonts/gentilis_regular.typeface.json',
+const info = {
+    paraula : 'TYPO'
+}
+const URLfonts = [ '/fonts/gentilis_regular.typeface.json',
                 '/fonts/helvetiker_regular.typeface.json',
                 '/fonts/optimer_regular.typeface.json',
                 '/fonts/Purple Smile_Regular.json',
-                '/fonts/Angon_Regular.json',
+                '/fonts/Purple Smile_Regular.json',
 ];
 
-/**
- * Fonts
- */
-const fontLoader = new FontLoader()
-
-// 25 textos diferents
-for(let i=0; i<25; i++) {
-
-    // Paraula
-    const np = Math.floor(Math.random()*paraules.length)
-    const paraula = paraules[np];
-
-    // URL Font
-    const nf = Math.floor(Math.random()*fonts.length)
-    const font = fonts[nf];
-
-    // Càrrega de Fonts i creació de Textos
-    fontLoader.load(
-        font,
-        (font) =>{
+const fontLoader = new FontLoader(manager)
+const fonts = []
+for(let i=0; i<URLfonts.length; i++){
+    fontLoader.load( URLfonts[i],
+        (font) => {
             console.log('Font loaded', font)
-            const textGeometry = new TextGeometry(
-                paraula,
-                {
-                    font: font,
-                    size: Math.random() + 0.5,
-                    height: 0.2,
-                    curveSegments: 5,
-                    bevelEnabled: true,
-                    bevelThickness: 0.03,
-                    bevelSize: 0.02,
-                    bevelOffset: 0,
-                    bevelSegments: 4
-                }
-            )
-
-            // Matcap aleatori
-            const n = Math.floor(Math.random()*matcapTextures.length)
-            const textMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTextures[n]})
-            const text = new THREE.Mesh(textGeometry, textMaterial)
-
-            // Posicionar
-            text.geometry.center()
-            text.position.set(Math.random()*5 -2.5, Math.random()*5 -2.5,Math.random()*5 -2.5)
-
-            // Afegir a l'escena i a l'array de malles
-            scene.add(text)
-            meshes.push(text)
-        }
-    )
+            fonts[i] = font
+        })
 }
+
+/**
+ * Objectes
+ */
+
+const grup = new THREE.Group()
+scene.add(grup)
+
+manager.onLoad = function ( ) {
+
+    console.log( 'Loading complete!');
+
+    for(let i=0; i<info.paraula.length; i++) {
+
+        // Lletra
+        const lletra = info.paraula[i];
+
+        // Font
+        const nf = Math.floor(Math.random()*fonts.length)
+        const fontR = fonts[nf];
+
+        // Matcap aleatori
+        const n = Math.floor(Math.random()*matcapTextures.length)
+        const textMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTextures[n]})
+
+        const textGeometry = new TextGeometry( lletra, {
+                font: fontR,
+                size: 1,
+                height: 0.2,
+                curveSegments: 5,
+                bevelEnabled: true,
+                bevelThickness: 0.03,
+                bevelSize: 0.02,
+                bevelOffset: 0,
+                bevelSegments: 4
+            }
+        )
+        const text = new THREE.Mesh(textGeometry, textMaterial)
+
+        // Posicionar
+        text.position.x = i
+
+        // Afegir a l'escena i a l'array de malles
+        grup.add(text)
+        meshes.push(text)
+
+    }
+};
+
+grup.position.x =-info.paraula.length/2
 
 /**
  * Lights
@@ -173,42 +183,16 @@ controls.enableDamping = true
 const gui = new dat.GUI()
 const fs = gui.addFolder('SCENE')
 fs.addColor(scene, 'background').name('Background Color')
-const fc = gui.addFolder('CAMERA')
-fc.add(camera.position, 'x').min(- 3).max(3).step(0.01)
-fc.add(camera.position, 'y').min(- 3).max(3).step(0.01)
-fc.add(camera.position, 'z').min(0).max(10).step(0.01)
-const fl = gui.addFolder('LIGHTS')
-fl.addColor(ambientLight, 'color').name('Ambient Color')
-fl.add(pointLight, 'intensity').name('PointLight Intensity').min(0).max(1).step(0.01)
-
-const resetObjectes = {
-    objectRotation: true,
-    randomScale: () => {
-        meshes.forEach((mesh, index, array)=>{
-            const scale = Math.random()
-            mesh.scale.set(scale, scale, scale)
-        })
-    },
-    randomPosition: () => {
-        meshes.forEach((mesh, index, array)=>{
-            mesh.position.set(Math.random()*5 -2.5, Math.random()*5 -2.5,Math.random()*5 -2.5)
-        })
-    },
-    randomMaterial: () => {
-        meshes.forEach((mesh, index, array)=>{
-            // Matcap aleatori
-            const n = Math.floor(Math.random()*matcapTextures.length)
-            const material = new THREE.MeshMatcapMaterial({ matcap: matcapTextures[n]})
-            mesh.material = material;
-        })
+const ft = gui.addFolder('TEXT')
+ft.add(info, 'paraula').name('text').onChange((value)=>{
+    console.log(value)
+    for(let i=0; i<meshes.length; i++){
+        if(i>=value.length){
+            meshes[i].remove()
+        }
     }
-}
+})
 
-const fo = gui.addFolder('OBJECTS')
-fo.add(resetObjectes, 'objectRotation')
-fo.add(resetObjectes, 'randomScale').name('Re-SCALE')
-fo.add(resetObjectes, 'randomPosition').name('Re-POSITION')
-fo.add(resetObjectes, 'randomMaterial').name('Re-MATERIAL')
 
 /**
  * Renderer
@@ -229,13 +213,7 @@ const tick = () =>
     const elapsedTime = clock.getElapsedTime()
 
     // Update objects
-    if(resetObjectes.objectRotation) {
-        meshes.forEach((element, index, array) => {
-            element.rotation.y = elapsedTime * (index + 1) / 10
-            element.rotation.x = elapsedTime * (index + 1) / 10
-            element.rotation.z = elapsedTime * (index + 1) / 10
-        })
-    }
+
 
     // Update lights
     pointLight.position.x = Math.sin(elapsedTime)*5

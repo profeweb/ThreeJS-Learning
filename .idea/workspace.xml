@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/starterWebpackThreeJS.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/static/fonts/Angon_Regular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/bundler/webpack.common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/bundler/webpack.dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/bundler/webpack.prod.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/src/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/fonts/Purple Smile_Regular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/fonts/gentilis_regular.typeface.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/fonts/optimer_regular.typeface.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/textures/matcaps/8.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act05-escena text 3d/src/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/nx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/ny.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/nz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/py.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp12/static/textures/environmentMaps/4/pz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/temp13/static/fonts/helvetiker_regular.typeface.json" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/activitats/act05b-escena/static/fonts/helvetiker_regular.typeface.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,18 +66,18 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics/temp13/static/fonts&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/activitats/act05-escena text 3d/static/fonts&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\activitats\act05-escena text 3d\static\fonts" />
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\activitats" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\temp13\static\fonts" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\temp12\static\textures\environmentMaps\4" />
-      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\activitats\act05-escena text 3d\static\fonts" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\activitats\act05-escena text 3d\static" />
-      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\activitats\act04-escena materials\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\fundamentals\helloBoxModule" />
@@ -108,14 +137,8 @@
       <workItem from="1674751705201" duration="1445000" />
       <workItem from="1674808440039" duration="702000" />
       <workItem from="1674814888812" duration="23000" />
-      <workItem from="1674838008366" duration="2415000" />
-    </task>
-    <task id="LOCAL-00033" summary="ThreeJS">
-      <created>1673547488281</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1673547488281</updated>
+      <workItem from="1674838008366" duration="8945000" />
+      <workItem from="1674902055215" duration="21000" />
     </task>
     <task id="LOCAL-00034" summary="ThreeJS">
       <created>1673599934525</created>
@@ -453,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674752092273</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="ThreeJS">
+      <created>1674842169354</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1674842169355</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
