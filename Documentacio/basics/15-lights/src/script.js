@@ -18,6 +18,9 @@ const scene = new THREE.Scene()
 /**
  * Lights
  */
+
+// (1) Sense Llums (Comentar Ambient i Point) --> Escena a les fosques (MeshStandardMaterial)!!!
+/*
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
 scene.add(ambientLight)
 
@@ -26,6 +29,95 @@ pointLight.position.x = 2
 pointLight.position.y = 3
 pointLight.position.z = 4
 scene.add(pointLight)
+ */
+
+// (2) AmbientLight (Llum omnidireccional)
+//const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
+const ambientLight = new THREE.AmbientLight()
+ambientLight.color = new THREE.Color(0xffffff)
+ambientLight.intensity = 0.5
+//scene.add(ambientLight)
+
+// (3) Ús de debugger UI
+const fal = gui.addFolder('AMBIENT LIGHT')
+fal.addColor(ambientLight, 'color')
+fal.add(ambientLight, 'intensity').min(0).max(1).step(0.001)
+
+// (4) DirectionalLight
+const directionalLight = new THREE.DirectionalLight(0x00fffc, 0.3)
+directionalLight.position.set(1, 0.25, 0)
+// Per defecte no importa la distància del llum
+directionalLight.position.set(1000, 0.25, 0)
+// Per defecte apunta al centre de l'escena
+//scene.add(directionalLight)
+
+const fdl = gui.addFolder('DIRECTIONAL LIGHT')
+fdl.addColor(ambientLight, 'color')
+fdl.add(ambientLight, 'intensity').min(0).max(1).step(0.001)
+
+// (5) HemisphereLight
+const paramsHL = {
+    color: 0xff0000,
+    groundColor: 0x0000ff,
+    intensity: 0.5
+}
+const hemisphereLight = new THREE.HemisphereLight(paramsHL.color, paramsHL.groundColor, paramsHL.intensity)
+//scene.add(hemisphereLight)
+
+const fhl = gui.addFolder('HEMISPHERE LIGHT')
+
+fhl.addColor(paramsHL, 'color').onChange((value)=>{
+    hemisphereLight.color = new THREE.Color(value)
+})
+fhl.add(paramsHL, 'intensity').onChange((value)=>{
+    hemisphereLight.intensity = value
+})
+fhl.addColor(paramsHL, 'groundColor').onChange((value)=>{
+    hemisphereLight.groundColor = new THREE.Color(value)
+})
+
+// (6) PointLight
+const pointLight = new THREE.PointLight(0xff9000, 0.5)
+pointLight.position.set(1, -0.5, 1)
+pointLight.distance = 10
+pointLight.decay = 0.3
+//scene.add(pointLight)
+
+const fpl = gui.addFolder('POINT LIGHT')
+fpl.add(pointLight, 'distance').min(0).max(20).step(0.001)
+fpl.add(pointLight, 'decay').min(0).max(1).step(0.001)
+
+// (7) RectAreaLight
+const rectAreaLight = new THREE.RectAreaLight(0x4e00ff, 2, 1, 1)
+rectAreaLight.position.set(-1.5, 0, 1.5)
+rectAreaLight.lookAt(new THREE.Vector3())
+//scene.add(rectAreaLight)
+
+const fral = gui.addFolder('RECT AREA LIGHT')
+fral.add(rectAreaLight, 'width').min(0).max(5).step(0.001)
+fral.add(rectAreaLight, 'height').min(0).max(5).step(0.001)
+
+// (8) SpotLight
+const spotLight = new THREE.SpotLight(0x78ff00, 0.5, 10, Math.PI*0.1, 0.25, 1)
+spotLight.position.set(0, 2, 3)
+scene.add(spotLight)
+
+console.log(spotLight.target)
+spotLight.target.position.x = -0.75
+scene.add(spotLight.target)
+
+const fsl = gui.addFolder('SPOT LIGHT')
+fsl.addColor(spotLight, 'color')
+fsl.add(spotLight, 'intensity').min(0).max(1).step(0.001)
+fsl.add(spotLight, 'distance').min(0).max(100).step(0.01)
+fsl.add(spotLight, 'angle').min(0).max(Math.PI).step(0.001)
+fsl.add(spotLight, 'penumbra').min(0).max(1).step(0.001)
+fsl.add(spotLight, 'decay').min(0).max(1).step(0.001)
+fsl.add(spotLight.target.position, 'x').min(-1).max(1).step(0.001).name('X target')
+fsl.add(spotLight.target.position, 'y').min(-1).max(1).step(0.001).name('Y target')
+fsl.add(spotLight.target.position, 'z').min(-1).max(1).step(0.001).name('Z target')
+
+
 
 /**
  * Objects
