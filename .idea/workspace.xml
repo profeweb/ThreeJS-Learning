@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/src/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/src/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,14 +115,7 @@
       <workItem from="1675266984939" duration="10075000" />
       <workItem from="1675327295107" duration="2163000" />
       <workItem from="1675357691334" duration="4882000" />
-      <workItem from="1675408285638" duration="6938000" />
-    </task>
-    <task id="LOCAL-00043" summary="ThreeJS">
-      <created>1673605464746</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1673605464746</updated>
+      <workItem from="1675408285638" duration="9660000" />
     </task>
     <task id="LOCAL-00044" summary="ThreeJS">
       <created>1673605621664</created>
@@ -462,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675414509786</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="ThreeJS">
+      <created>1675417296056</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1675417296056</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
