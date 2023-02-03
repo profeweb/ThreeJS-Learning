@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/17-haunted-house/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/17-haunted-house/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,14 +115,7 @@
       <workItem from="1675266984939" duration="10075000" />
       <workItem from="1675327295107" duration="2163000" />
       <workItem from="1675357691334" duration="4882000" />
-      <workItem from="1675408285638" duration="492000" />
-    </task>
-    <task id="LOCAL-00041" summary="ThreeJS">
-      <created>1673601278890</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1673601278890</updated>
+      <workItem from="1675408285638" duration="6123000" />
     </task>
     <task id="LOCAL-00042" summary="ThreeJS">
       <created>1673605437003</created>
@@ -459,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675362018176</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="ThreeJS">
+      <created>1675408842504</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1675408842505</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
