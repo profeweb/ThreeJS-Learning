@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/static/textures/particles/9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/19-galaxy-generator/src/script.js" afterDir="false" />
     </list>
@@ -130,14 +117,7 @@
       <workItem from="1675357691334" duration="4882000" />
       <workItem from="1675408285638" duration="9660000" />
       <workItem from="1675427177350" duration="11000" />
-      <workItem from="1675443130839" duration="7880000" />
-    </task>
-    <task id="LOCAL-00044" summary="ThreeJS">
-      <created>1673605621664</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1673605621664</updated>
+      <workItem from="1675443130839" duration="9587000" />
     </task>
     <task id="LOCAL-00045" summary="ThreeJS">
       <created>1673605652069</created>
@@ -475,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675417296056</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="ThreeJS">
+      <created>1675452761039</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1675452761040</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

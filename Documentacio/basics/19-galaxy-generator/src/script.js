@@ -18,7 +18,7 @@ const scene = new THREE.Scene()
 // (2) Textures
 const textureLoader = new THREE.TextureLoader()
 const textures = []
-for(let i=0; i<10; i++){
+for(let i=0; i<13; i++){
     textures[i] = textureLoader.load('/textures/particles/'+(i+1)+'.png')
 }
 
@@ -42,16 +42,21 @@ scene.add(cube)
 const parameters = {
     count: 10000,
     size: 0.001,
+    sizeAttenuation: true,
     radius: 5,
     branches: 3,
     spin: 1,
     randomness: 0.2,
     randomnessPower: 3,
+    color: '#ffffff',
     insideColor: '#ff6030',
     outsideColor: '#1b3984',
     texture: 0,
-    texturename: 'STAR'
+    texturename: 'STAR',
+    blending: THREE.AdditiveBlending
 }
+
+scene.background = new THREE.Color(parameters.color)
 
 
 // (1.2) FUNCIÓ GENERADORA DE LA GALÀXIA
@@ -112,11 +117,11 @@ const generateGalaxy = () => {
     // (1.2.3) Material
     material = new THREE.PointsMaterial({
         size: parameters.size,
-        sizeAttenuation: true,
+        sizeAttenuation: parameters.sizeAttenuation,
         alphaMap: textures[parameters.texture],
         transparent: true,
         depthWrite: false,
-        blending: THREE.AdditiveBlending,
+        blending: parameters.blending,
         vertexColors: true
     })
 
@@ -135,6 +140,8 @@ onFinishChange(generateGalaxy)
 
 gui.add(parameters, 'size').min(0.001).max(0.1).step(0.001).
 onFinishChange(generateGalaxy)
+
+gui.add(parameters, 'sizeAttenuation').onChange(generateGalaxy)
 
 gui.add(parameters, 'radius').min(0.01).max(20).step(0.01).
 onFinishChange(generateGalaxy)
@@ -155,15 +162,44 @@ gui.addColor(parameters, 'insideColor').onFinishChange(generateGalaxy)
 
 gui.addColor(parameters, 'outsideColor').onFinishChange(generateGalaxy)
 
-gui.add( parameters, 'texturename', [ 'STAR', 'PLANET', 'HALO' ] ).onChange((value)=>{
+gui.addColor(parameters, 'color').onChange((value)=>{
+    scene.background = new THREE.Color(value)
+})
+
+gui.add( parameters, 'texturename', [ 'STAR', 'PLANET', 'HALO' , 'MOON', 'EXPLOSION'] ).onChange((value)=>{
     if(value=='STAR') {
-        parameters.texture = 0;
+        parameters.texture = 4;
     }
     else if(value=='PLANET') {
-        parameters.texture = 1;
+        parameters.texture = 0;
     }
     else if(value=='HALO') {
+        parameters.texture = 1;
+    }
+    else if(value=='MOON') {
+        parameters.texture = 5;
+    }
+    else if(value=='EXPLOSION') {
         parameters.texture = 2;
+    }
+    generateGalaxy()
+})
+
+gui.add( parameters, 'blending', [ 'NO', 'NORMAL', 'ADD' , 'SUBS', 'MULT'] ).onChange((value)=>{
+    if(value=='NO') {
+        parameters.blending = THREE.NoBlending
+    }
+    else if(value=='NORMAL') {
+        parameters.blending = THREE.NormalBlending
+    }
+    else if(value=='ADD') {
+        parameters.blending = THREE.AdditiveBlending
+    }
+    else if(value=='SUBS') {
+        parameters.blending = THREE.SubtractiveBlending
+    }
+    else if(value=='MULT') {
+        parameters.blending = THREE.MultiplyBlending
     }
     generateGalaxy()
 })
@@ -223,6 +259,16 @@ const clock = new THREE.Clock()
 const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
+
+    for(let i=0; i<parameters.count; i++){
+        const i3 = i*3
+        const x = geometry.attributes.position.array[i3]
+        const y = geometry.attributes.position.array[i3 + 1]
+        const z = geometry.attributes.position.array[i3 + 2]
+        geometry.attributes.position.array[i3+0] = Math.cos(elapsedTime/10 + y*z)
+        geometry.attributes.position.array[i3+1] = Math.sin(elapsedTime + x*z)
+    }
+    geometry.attributes.position.needsUpdate = true
 
     // Update controls
     controls.update()
