@@ -15,6 +15,13 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
+// (2) Textures
+const textureLoader = new THREE.TextureLoader()
+const textures = []
+for(let i=0; i<10; i++){
+    textures[i] = textureLoader.load('/textures/particles/'+(i+1)+'.png')
+}
+
 /**
  * Test cube
  */
@@ -27,7 +34,7 @@ const cube = new THREE.Mesh(
 scene.add(cube)
 */
 
-// (1) GALÂXIA ///////////////////////////////////////////////////////////////////
+// (1) GALÀXIA ///////////////////////////////////////////////////////////////////
 
 
 // (1.1) PARÀMETRES DE LA GALÀXIA
@@ -42,7 +49,8 @@ const parameters = {
     randomnessPower: 3,
     insideColor: '#ff6030',
     outsideColor: '#1b3984',
-
+    texture: 0,
+    texturename: 'STAR'
 }
 
 
@@ -64,7 +72,6 @@ const generateGalaxy = () => {
 
     const colorInside = new THREE.Color(parameters.insideColor)
     const colorOutside = new THREE.Color(parameters.outsideColor)
-
 
     console.log('Genera Galàxia')
 
@@ -106,6 +113,8 @@ const generateGalaxy = () => {
     material = new THREE.PointsMaterial({
         size: parameters.size,
         sizeAttenuation: true,
+        alphaMap: textures[parameters.texture],
+        transparent: true,
         depthWrite: false,
         blending: THREE.AdditiveBlending,
         vertexColors: true
@@ -146,6 +155,18 @@ gui.addColor(parameters, 'insideColor').onFinishChange(generateGalaxy)
 
 gui.addColor(parameters, 'outsideColor').onFinishChange(generateGalaxy)
 
+gui.add( parameters, 'texturename', [ 'STAR', 'PLANET', 'HALO' ] ).onChange((value)=>{
+    if(value=='STAR') {
+        parameters.texture = 0;
+    }
+    else if(value=='PLANET') {
+        parameters.texture = 1;
+    }
+    else if(value=='HALO') {
+        parameters.texture = 2;
+    }
+    generateGalaxy()
+})
 
 
 /**
