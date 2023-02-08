@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/draco_decoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/draco_decoder.wasm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/draco_encoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/draco_wasm_wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/gltf/draco_decoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/gltf/draco_decoder.wasm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/gltf/draco_encoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/gltf/draco_wasm_wrapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/21-scroll-based-animation/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/21-scroll-based-animation/src/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/21-scroll-based-animation/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/21-scroll-based-animation/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,24 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics/19-galaxy-generator/static&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics/23-imported-models/static",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\23-imported-models\static" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\19-galaxy-generator\static" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\activitats\act05-escena text 3d\static\fonts" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\activitats" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\temp13\static\fonts" />
-      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\temp12\static\textures\environmentMaps\4" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\fundamentals\helloBoxModule" />
@@ -118,14 +130,7 @@
       <workItem from="1675427177350" duration="11000" />
       <workItem from="1675443130839" duration="9712000" />
       <workItem from="1675789305764" duration="880000" />
-      <workItem from="1675840395833" duration="1788000" />
-    </task>
-    <task id="LOCAL-00047" summary="ThreeJS">
-      <created>1673606709659</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1673606709659</updated>
+      <workItem from="1675840395833" duration="13820000" />
     </task>
     <task id="LOCAL-00048" summary="ThreeJS">
       <created>1673610031028</created>
@@ -463,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675792963275</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="ThreeJS">
+      <created>1675845173479</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1675845173480</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

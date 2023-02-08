@@ -4,10 +4,18 @@
     padding: 0;
 }
 
+/*
 html,
 body
 {
     overflow: hidden;
+}
+
+ */
+
+/* Color del fons de la pàgina web */
+html {
+    background: #1e1a20;
 }
 
 .webgl
