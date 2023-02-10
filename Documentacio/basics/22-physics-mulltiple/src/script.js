@@ -65,7 +65,6 @@ const scene = new THREE.Scene()
 /**
  * Textures
  */
-const textureLoader = new THREE.TextureLoader()
 const cubeTextureLoader = new THREE.CubeTextureLoader()
 
 const environmentMapTexture = cubeTextureLoader.load([
@@ -102,8 +101,6 @@ const environmentMapTexture = cubeTextureLoader.load([
  const floorShape = new CANNON.Plane()
  const floorBody = new CANNON.Body()
  floorBody.mass = 0
- //floorBody.material = concreteMaterial
- //floorBody.material = defaultMaterial
  floorBody.addShape(floorShape)
  floorBody.quaternion.setFromAxisAngle(
      new CANNON.Vec3(1,0,0),
@@ -170,13 +167,6 @@ const sphereMaterial = new THREE.MeshStandardMaterial({
      })
  }
 
- // (3.2) Cridades a la funció
- //createSphere(0.5, {x:0, y:3, z:0})
- //createSphere(0.5, {x:2, y:3, z:0})
- //createSphere(0.5, {x:-2, y:3, z:0})
-
- //setInterval(function () {createSphere(0.5, {x:0, y:3, z:0}) }, 1000);
-
  // (3.4) Test de l'array
  console.log(objectsToUpdate)
 
@@ -226,6 +216,7 @@ const sphereMaterial = new THREE.MeshStandardMaterial({
  // (5.2) Sleep
  world.allowSleep = true
 
+
  // (6) EVENTS /////////////////////////////////////
 
  // (6.1) Audio a reproduir en cas de Col·lisions
@@ -244,8 +235,6 @@ const sphereMaterial = new THREE.MeshStandardMaterial({
          hitSound.play()
      }
  }
-
- // (6.2) Escoltar l'esdeveniment de col·lisió 'collide'
 
 
 /**

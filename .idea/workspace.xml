@@ -2,58 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/bundler/webpack.common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/bundler/webpack.dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/bundler/webpack.prod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/src/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/src/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/sounds/hit.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/0/nx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/0/ny.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/0/nz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/0/px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/0/py.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/0/pz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/1/nx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/1/ny.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/1/nz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/1/px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/1/py.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/1/pz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/2/nx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/2/ny.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/2/nz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/2/px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/2/py.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/2/pz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/3/nx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/3/ny.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/3/nz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/3/px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/3/py.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/3/pz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/4/nx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/4/ny.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/4/nz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/4/px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/4/py.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics-mulltiple/static/textures/environmentMaps/4/pz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/draco_decoder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/draco_decoder.wasm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/draco_encoder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/draco_wasm_wrapper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/gltf/draco_decoder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/gltf/draco_decoder.wasm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/gltf/draco_encoder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/23-imported-models/static/draco/gltf/draco_wasm_wrapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/22-physics/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/22-physics/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,14 +121,7 @@
       <workItem from="1675840395833" duration="15865000" />
       <workItem from="1675870895570" duration="10456000" />
       <workItem from="1676016528723" duration="5264000" />
-      <workItem from="1676022429219" duration="5914000" />
-    </task>
-    <task id="LOCAL-00049" summary="ThreeJS">
-      <created>1673627152166</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1673627152166</updated>
+      <workItem from="1676022429219" duration="6730000" />
     </task>
     <task id="LOCAL-00050" summary="ThreeJS">
       <created>1673627295240</created>
@@ -517,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675862177334</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="ThreeJS">
+      <created>1676037178882</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1676037178884</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
