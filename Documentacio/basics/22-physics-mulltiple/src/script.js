@@ -157,6 +157,7 @@ const sphereMaterial = new THREE.MeshStandardMaterial({
          material: defaultMaterial
      })
      body.position.copy(position)
+     //body.applyLocalForce(new CANNON.Vec3(-100, -1000, 0), new CANNON.Vec3(0,0,0))
      // Listener de l'event collide
      body.addEventListener('collide', playHitSound)
      world.addBody(body)
