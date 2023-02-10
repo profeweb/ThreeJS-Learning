@@ -56,21 +56,27 @@ const gui = new dat.GUI()
  }
 gui.add(debugObject, 'reset')
 
+ const gf = gui.addFolder('Gravity')
  debugObject.gravity = { x: 0, y:-9.81, z:0}
- gui.add(debugObject.gravity, 'x').min(-10).max(10).step(0.1).name('X Gravity').onFinishChange(()=>{
+ gf.add(debugObject.gravity, 'x').min(-10).max(10).step(0.1).name('X Gravity').onFinishChange(()=>{
      world.gravity.set(debugObject.gravity.x, debugObject.gravity.y, debugObject.gravity.z)
  })
- gui.add(debugObject.gravity, 'y').min(-10).max(10).step(0.1).name('Y Gravity').onFinishChange(()=>{
+ gf.add(debugObject.gravity, 'y').min(-10).max(10).step(0.1).name('Y Gravity').onFinishChange(()=>{
      world.gravity.set(debugObject.gravity.x, debugObject.gravity.y, debugObject.gravity.z)
  })
- gui.add(debugObject.gravity, 'z').min(-10).max(10).step(0.1).name('Z Gravity').onFinishChange(()=>{
+ gf.add(debugObject.gravity, 'z').min(-10).max(10).step(0.1).name('Z Gravity').onFinishChange(()=>{
      world.gravity.set(debugObject.gravity.x, debugObject.gravity.y, debugObject.gravity.z)
  })
 
+
+
+ const iff = gui.addFolder('Initial Force')
  debugObject.initialForce = { x: 0, y:0, z:0}
- gui.add(debugObject.initialForce, 'x').min(-1000).max(1000).step(0.1).name('X Dir')
- gui.add(debugObject.initialForce, 'y').min(-1000).max(1000).step(0.1).name('Y Dir')
- gui.add(debugObject.initialForce, 'z').min(-1000).max(1000).step(0.1).name('Z Dir')
+ iff.add(debugObject.initialForce, 'x').min(-1000).max(1000).step(0.1).name('X Dir')
+ iff.add(debugObject.initialForce, 'y').min(-1000).max(1000).step(0.1).name('Y Dir')
+ iff.add(debugObject.initialForce, 'z').min(-1000).max(1000).step(0.1).name('Z Dir')
+
+
 
 /**
  * Base
@@ -114,6 +120,14 @@ const environmentMapTexture = cubeTextureLoader.load([
  )
  world.addContactMaterial(defaultContactMaterial)
  world.defaultContactMaterial = defaultContactMaterial
+
+ const cmf = gui.addFolder('Contact Material')
+ cmf.add(defaultContactMaterial, 'friction').min(0).max(1).step(0.001).onFinishChange((value)=>{
+     defaultContactMaterial.friction = value
+ })
+ cmf.add(defaultContactMaterial, 'restitution').min(0).max(1).step(0.001).onFinishChange((value)=>{
+     defaultContactMaterial.restitution = value
+ })
 
 
  // (2.4) Afegir el terra al món físic
@@ -236,6 +250,13 @@ const sphereMaterial = new THREE.MeshStandardMaterial({
  // (5.2) Sleep
  world.allowSleep = true
 
+ debugObject.allowSleep = true
+ gf.add(debugObject, 'allowSleep').onChange( (value)=>{
+     world.allowSleep = value
+     for(const object of objectsToUpdate){
+         object.body.wakeUp()
+     }
+ })
 
  // (6) EVENTS /////////////////////////////////////
 
