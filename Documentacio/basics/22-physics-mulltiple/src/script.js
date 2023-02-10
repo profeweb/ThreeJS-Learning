@@ -20,7 +20,9 @@ const gui = new dat.GUI()
              x: (Math.random() - 0.5) * 3,
              y: 3,
              z:(Math.random() - 0.5) * 3,
-         })
+         },
+         debugObject.initialForce
+     )
  }
  gui.add(debugObject, 'createSphere')
 
@@ -53,6 +55,23 @@ const gui = new dat.GUI()
      objectsToUpdate.splice(0, objectsToUpdate.length)
  }
 gui.add(debugObject, 'reset')
+
+ debugObject.gravity = { x: 0, y:-9.81, z:0}
+ gui.add(debugObject.gravity, 'x').min(-10).max(10).step(0.1).name('X Gravity').onFinishChange(()=>{
+     world.gravity.set(debugObject.gravity.x, debugObject.gravity.y, debugObject.gravity.z)
+ })
+ gui.add(debugObject.gravity, 'y').min(-10).max(10).step(0.1).name('Y Gravity').onFinishChange(()=>{
+     world.gravity.set(debugObject.gravity.x, debugObject.gravity.y, debugObject.gravity.z)
+ })
+ gui.add(debugObject.gravity, 'z').min(-10).max(10).step(0.1).name('Z Gravity').onFinishChange(()=>{
+     world.gravity.set(debugObject.gravity.x, debugObject.gravity.y, debugObject.gravity.z)
+ })
+
+ debugObject.initialForce = { x: 0, y:0, z:0}
+ gui.add(debugObject.initialForce, 'x').min(-1000).max(1000).step(0.1).name('X Dir')
+ gui.add(debugObject.initialForce, 'y').min(-1000).max(1000).step(0.1).name('Y Dir')
+ gui.add(debugObject.initialForce, 'z').min(-1000).max(1000).step(0.1).name('Z Dir')
+
 /**
  * Base
  */
@@ -80,7 +99,7 @@ const environmentMapTexture = cubeTextureLoader.load([
 
  // (2.1) Món físic amb gravetat (World)
  const world = new CANNON.World()
- world.gravity.set(0, -9.82, 0)
+ world.gravity.set(debugObject.gravity.x, debugObject.gravity.y, debugObject.gravity.z)
 
  // (2.3) Materials del món físic
 
@@ -139,7 +158,7 @@ const sphereMaterial = new THREE.MeshStandardMaterial({
  })
 
  // (3.1) Definició de la funció
- const createSphere = (radius, position)=>{
+ const createSphere = (radius, position, force)=>{
 
     // Mesh (Geometry + Material) de THREE.JS
     const mesh = new THREE.Mesh(sphereGeometry, sphereMaterial)
@@ -157,7 +176,7 @@ const sphereMaterial = new THREE.MeshStandardMaterial({
          material: defaultMaterial
      })
      body.position.copy(position)
-     //body.applyLocalForce(new CANNON.Vec3(-100, -1000, 0), new CANNON.Vec3(0,0,0))
+     body.applyLocalForce(new CANNON.Vec3(force.x, force.y, force.z), new CANNON.Vec3(0,0,0))
      // Listener de l'event collide
      body.addEventListener('collide', playHitSound)
      world.addBody(body)
@@ -283,7 +302,7 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.set(- 3, 3, 3)
+camera.position.set(0, 3, 3)
 scene.add(camera)
 
 // Controls
