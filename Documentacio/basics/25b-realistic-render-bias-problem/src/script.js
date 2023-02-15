@@ -19,21 +19,14 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
-/**
- * Test sphere
- */
-const testSphere = new THREE.Mesh(
-    new THREE.SphereGeometry(1, 32, 32),
-    //new THREE.MeshBasicMaterial()
-    new THREE.MeshStandardMaterial()
-)
-//scene.add(testSphere)
-
 // (1) Llums
 // (1.1) Llum Direccional
 const directionalLight = new THREE.DirectionalLight('#ffffff', 3)
 directionalLight.position.set(0.25, 3, -2.25)
 scene.add(directionalLight)
+
+// (**) Configurar el BIAS provocat per la llum
+directionalLight.shadow.normalBias = 0.05
 
 // (2) Controls GUI
 // (2.1) Ajustos de la Llum Ambiental
@@ -47,19 +40,14 @@ gui.add(directionalLight.position, 'z').min(- 5).max(5).step(0.001).name('lightZ
 // (3.1) Instanciar GLTFLoader
 const gltfLoader = new GLTFLoader()
 
-// (3.2) Carregar el model amb el mètode load
+// (3.2) Carregar el model amb el mètode load (*)
 gltfLoader.load(
-    './models/FlightHelmet/glTF/FlightHelmet.gltf',
+    './models/hamburger.glb',
     (gltf) => {
         console.log('loaded', gltf)
-        gltf.scene.scale.set(10, 10, 10)
-        gltf.scene.position.set(0, -4, 0)
-        gltf.scene.rotation.y = Math.PI * 0.5
+        gltf.scene.scale.set(0.3, 0.3, 0.3)
+        gltf.scene.position.set(0, -1, 0)
         scene.add(gltf.scene)
-
-        gui.add(gltf.scene.rotation, 'y')
-            .min(-Math.PI).max(Math.PI).step(0.001)
-            .name('rotation')
 
         updateAllMaterials()
     }
@@ -94,24 +82,16 @@ const updateAllMaterials = () => {
             // Ombres
             child.castShadow = true
             child.receiveShadow = true
-
         }
-
     })
 }
 
 // (4.4) Controlar la intensitat del mapa amb UI Debugger
 debugObject.envMapIntensity = 1
 gui.add(debugObject, 'envMapIntensity').min(0).max(10).step(0.001)
-    //.onChange(updateAllMaterials)
 
 // (4.5) Aplicar el mapa a tota l'escena
 scene.environment = environmentMap
-
-
-
-
-
 
 /**
  * Sizes
@@ -157,7 +137,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-// Corregir llums de l'escenea
+// Corregir llums de l'escena
 renderer.physicallyCorrectLights = true
 
 // (5) Output Encoding /////////////////////////////////////////
@@ -205,9 +185,6 @@ directionalLight.shadow.camera.far = 15
 directionalLight.shadow.mapSize.set(1024, 1024)
 
 // (8.5) Actualitzar els materials a la funció updateAllMaterials (castShadow, recieveShadow).
-
-
-
 
 
 /**
