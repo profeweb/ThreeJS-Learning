@@ -10,8 +10,37 @@
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/25-realistic-render/static/draco/gltf/draco_decoder.wasm" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/25-realistic-render/static/draco/gltf/draco_encoder.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/25-realistic-render/static/draco/gltf/draco_wasm_wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/src/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/models/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/models/hamburger.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/0/nx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/0/ny.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/0/nz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/0/px.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/0/py.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/0/pz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/1/nx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/1/ny.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/1/nz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/1/px.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/1/py.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/1/pz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/2/nx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/2/ny.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/2/nz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/2/px.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/2/py.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/2/pz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/3/nx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/3/ny.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/3/nz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/3/px.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/3/py.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/static/textures/environmentMaps/3/pz.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/25-realistic-render/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/25-realistic-render/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,27 +70,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics/20b-raycaster-models/static&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\20b-raycaster-models\static" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics" />
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\20b-raycaster-models\static" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\temp23\static" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\23-imported-models\static" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\19-galaxy-generator\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\25b-realistic-render-bias-problem\static\models" />
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\25b-realistic-render-bias-problem\static" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\fundamentals\helloBoxModule" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio" />
     </key>
@@ -138,14 +169,7 @@
       <workItem from="1676283498645" duration="25000" />
       <workItem from="1676449524686" duration="7190000" />
       <workItem from="1676458434306" duration="2344000" />
-      <workItem from="1676461900792" duration="792000" />
-    </task>
-    <task id="LOCAL-00056" summary="ThreeJS">
-      <created>1674034026016</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1674034026016</updated>
+      <workItem from="1676461900792" duration="1626000" />
     </task>
     <task id="LOCAL-00057" summary="ThreeJS">
       <created>1674037455351</created>
@@ -483,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676458664372</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="ThreeJS">
+      <created>1676462768436</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1676462768437</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
