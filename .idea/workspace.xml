@@ -10,8 +10,14 @@
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/25-realistic-render/static/draco/gltf/draco_decoder.wasm" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/25-realistic-render/static/draco/gltf/draco_encoder.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/25-realistic-render/static/draco/gltf/draco_wasm_wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/27-shaders/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/27-shaders/src/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/27-shaders/src/shaders/test/fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/27-shaders/src/shaders/test/vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/27-shaders/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/27-shaders/static/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/27-shaders/static/textures/flag-french.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/25b-realistic-render-bias-problem/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,10 +62,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics" />
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\temp20\static\models\Duck" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\20b-raycaster-models\static" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\temp23\static" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\23-imported-models\static" />
-      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\19-galaxy-generator\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\25b-realistic-render-bias-problem\static\models" />
@@ -141,14 +147,8 @@
       <workItem from="1676449524686" duration="7190000" />
       <workItem from="1676458434306" duration="2344000" />
       <workItem from="1676461900792" duration="1747000" />
-      <workItem from="1676468890940" duration="332000" />
-    </task>
-    <task id="LOCAL-00058" summary="ThreeJS">
-      <created>1674056347876</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1674056347877</updated>
+      <workItem from="1676468890940" duration="11632000" />
+      <workItem from="1676546858148" duration="2328000" />
     </task>
     <task id="LOCAL-00059" summary="ThreeJS">
       <created>1674068356331</created>
@@ -486,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676464272492</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="ThreeJS">
+      <created>1676469332648</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1676469332649</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
