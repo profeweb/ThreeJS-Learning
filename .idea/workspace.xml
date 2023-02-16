@@ -10,6 +10,69 @@
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/25-realistic-render/static/draco/gltf/draco_decoder.wasm" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/25-realistic-render/static/draco/gltf/draco_encoder.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/25-realistic-render/static/draco/gltf/draco_wasm_wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/01_helloworld.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/02_castError.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/03_red.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/04_green.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/05_blue.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/06_yellow_vec3&amp;4.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/07_changeRedOnTime.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/08_slowerRedOnTime.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/09_fasterRedOnTime.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/10_differentRGBfrequency.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/11_coordinatesFragCoordXY.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/12_mouseCoordColor.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/13_timeMouseAndFunctions.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/14_horizontalGradient.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/15_verticalGradient.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/16_vertOppositeGradient.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/17_ascDiagonal.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/18_descDiagonal.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/19_ascCurve.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/20_descCurve.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/21_curveSQRT.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/22_curveSIN.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/23_curveCOS.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/24_curveEXP.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/25_curveLOG.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/26_STEPexample.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/27_STEPexample2.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/28_STEPexample3.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/29_STEPexampla4.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/30_SmoothStepExample01.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/31_SmoothStepExample02.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/32_Mixing2Colors.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/33_EasingFunctions.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/34_MixingDifferentFunctionsByChannel.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/35_rgb2hsb.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/36_hsbPolar.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/37_spinningHSB.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/38_squareShape.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/39_squareAnimatedSize.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/40_smoothSquare.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/41_smoothSquareAnimatedSize.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/42_squareFloor.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/43_squareFloorAnimatedSize.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/44_squareOutline.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/45_squareOutlineAnimatedSize.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/46_squareOutlineFunction.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/47_fillCircle.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/48_fillCircleInverse.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/49_fillCircleSmoothStep.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/50_fillCircleFunction.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/51_fillRedCircle.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/52_fillColorCircle.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/53_animatedFillCircle.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/54_differentCircles.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/55_addDistance2Points.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/56_multDistance2Points.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/57_minDistance2Points.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/58_maxDistance2Points.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/59_powDistance2Points.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/60_animatedMaxDistance2Points.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/shaders/fragment shaders/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/27-shaders/src/shaders/test/vertex.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/27-shaders/src/shaders/test/vertex.glsl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +111,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -141,13 +204,9 @@
       <workItem from="1676461900792" duration="1747000" />
       <workItem from="1676468890940" duration="11632000" />
       <workItem from="1676546858148" duration="2383000" />
-    </task>
-    <task id="LOCAL-00060" summary="ThreeJS">
-      <created>1674068645775</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1674068645775</updated>
+      <workItem from="1676566716493" duration="597000" />
+      <workItem from="1676567351291" duration="716000" />
+      <workItem from="1676568150031" duration="1261000" />
     </task>
     <task id="LOCAL-00061" summary="ThreeJS">
       <created>1674069014105</created>
@@ -485,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676550947678</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="ThreeJS">
+      <created>1676566761679</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1676566761680</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
