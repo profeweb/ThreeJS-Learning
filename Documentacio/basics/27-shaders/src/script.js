@@ -23,24 +23,51 @@ const scene = new THREE.Scene()
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
+const flagTexture = textureLoader.load('/textures/flag-french.jpg')
 
 /**
  * Test mesh
  */
 // Geometry
 const geometry = new THREE.PlaneGeometry(1, 1, 32, 32)
+//console.log(geometry)
+
+// (2) Crear un atribut per passar als shaders
+const count = geometry.attributes.position.count
+const randoms = new Float32Array(count)
+for(let i=0; i<count; i++){
+    randoms[i] = Math.random()
+}
+
+geometry.setAttribute('aRandom', new THREE.BufferAttribute(randoms, 1))
+console.log(geometry)
 
 // Material
 //const material = new THREE.MeshBasicMaterial()
 // (1) Canvi del material a
 const material = new THREE.RawShaderMaterial({
     vertexShader: testVertexShader,
-    fragmentShader: testFragmentShader
+    fragmentShader: testFragmentShader,
+    transparent: true,
+    uniforms:{
+        uFrequency: {
+            // type: 'float',
+            value: new THREE.Vector2(10, 5)
+        },
+        uTime: { value: 0},
+        uColor: { value: new THREE.Color('orange')},
+        uTexture: { value: flagTexture }
+    }
 })
 
+// Controls per a les freqüències
+gui.add(material.uniforms.uFrequency.value, 'x').min(0).max(20).step(0.01).name('X Freq')
+gui.add(material.uniforms.uFrequency.value, 'y').min(0).max(20).step(0.01).name('Y Freq')
+gui.addColor(material.uniforms.uColor, 'value')
 
 // Mesh
 const mesh = new THREE.Mesh(geometry, material)
+mesh.scale.y = 2/ 3
 scene.add(mesh)
 
 /**
@@ -95,6 +122,9 @@ const clock = new THREE.Clock()
 const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
+
+    // Update uTime
+    material.uniforms.uTime.value = elapsedTime
 
     // Update controls
     controls.update()
