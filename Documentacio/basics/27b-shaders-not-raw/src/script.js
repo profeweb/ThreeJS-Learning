@@ -49,6 +49,7 @@ const material = new THREE.ShaderMaterial({
     vertexShader: testVertexShader,
     fragmentShader: testFragmentShader,
     transparent: true,
+    side: THREE.DoubleSide,
     uniforms:{
         uFrequency: {
             // type: 'float',
