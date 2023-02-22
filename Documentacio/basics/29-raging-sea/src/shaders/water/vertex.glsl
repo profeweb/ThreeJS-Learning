@@ -103,14 +103,19 @@ void main()
                         sin(modelPosition.z * uBigWavesFrequency.y + uTime*uBigWavesSpeed ) *
                         uBigWavesElevation;
 
-    /*
+    // Afegir renou
+    //elevation+=cnoise(vec3(modelPosition.xz*3.0, uTime*0.2))*0.15;
 
-    for(float i = 1.0; i <= uSmallIterations; i++)
-    {
+    // Configurara el renou perquè sembli la mar
+    //elevation-=abs(cnoise(vec3(modelPosition.xz*3.0, uTime*0.2))*0.15);
+
+    // Repetir el renou a diferents nivells
+    //for(float i = 1.0; i <= 3.0; i++) {
+    for(float i = 1.0; i <= uSmallIterations; i++) {
+        //elevation-=abs(cnoise(vec3(modelPosition.xz*3.0, uTime*0.2))*0.15);
+        //elevation-=abs(cnoise(vec3(modelPosition.xz * 3.0 * i, uTime*0.2))*0.15/i);
         elevation -= abs(cnoise(vec3(modelPosition.xz * uSmallWavesFrequency * i, uTime * uSmallWavesSpeed)) * uSmallWavesElevation / i);
     }
-
-    */
 
     modelPosition.y += elevation;
 

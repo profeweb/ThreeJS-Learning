@@ -41,13 +41,15 @@ const waterMaterial = new THREE.ShaderMaterial({
     fragmentShader: waterFragmentShader,
     uniforms:
         {
-            uTime: {value: 0 },  // Animació
+            // Animació
+            uTime: {value: 0 },
 
             // Altura i Frequència de les ones
             uBigWavesElevation: { value: 0.2 },
             uBigWavesFrequency: { value: new THREE.Vector2(4, 1.5) },
 
-            uBigWavesSpeed: { value: 0.75 }, // Velocitat de les ones
+            // Velocitat de les ones
+            uBigWavesSpeed: { value: 0.75 },
 
             // Colors de les ones (depén d'altura)
             uDepthColor: {value: new THREE.Color(debugObject.depthColor) },
@@ -55,17 +57,13 @@ const waterMaterial = new THREE.ShaderMaterial({
 
             // Controls dels colors
             uColorOffset: { value: 0.08 },
-            uColorMultiplier: { value: 5 }
+            uColorMultiplier: { value: 5 },
 
             // Controls ones petites
-            /*
-                        uSmallWavesElevation: { value: 0.15 },
-                        uSmallWavesFrequency: { value: 3 },
-                        uSmallWavesSpeed: { value: 0.2 },
-                        uSmallIterations: { value: 4 },
-
-
-                         */
+            uSmallWavesElevation: { value: 0.15 },
+            uSmallWavesFrequency: { value: 3 },
+            uSmallWavesSpeed: { value: 0.2 },
+            uSmallIterations: { value: 4 },
         }
 })
 
@@ -80,13 +78,11 @@ gui.addColor(debugObject, 'surfaceColor').onChange(() => { waterMaterial.uniform
 gui.add(waterMaterial.uniforms.uColorOffset, 'value').min(0).max(1).step(0.001).name('uColorOffset')
 gui.add(waterMaterial.uniforms.uColorMultiplier, 'value').min(0).max(10).step(0.001).name('uColorMultiplier')
 
-/*
 gui.add(waterMaterial.uniforms.uSmallWavesElevation, 'value').min(0).max(1).step(0.001).name('uSmallWavesElevation')
 gui.add(waterMaterial.uniforms.uSmallWavesFrequency, 'value').min(0).max(30).step(0.001).name('uSmallWavesFrequency')
 gui.add(waterMaterial.uniforms.uSmallWavesSpeed, 'value').min(0).max(4).step(0.001).name('uSmallWavesSpeed')
 gui.add(waterMaterial.uniforms.uSmallIterations, 'value').min(0).max(5).step(1).name('uSmallIterations')
 
-*/
 // Mesh
 const water = new THREE.Mesh(waterGeometry, waterMaterial)
 water.rotation.x = - Math.PI * 0.5
