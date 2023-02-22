@@ -1,6 +1,5 @@
 
 // Uniforms:
-
 uniform float uTime;
 uniform float uBigWavesElevation;
 uniform vec2 uBigWavesFrequency;

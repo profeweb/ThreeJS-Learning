@@ -1,8 +1,11 @@
+
+// Unforms:
 uniform vec3 uDepthColor;
 uniform vec3 uSurfaceColor;
 uniform float uColorOffset;
 uniform float uColorMultiplier;
 
+// Varying:
 varying float vElevation;
 
 void main()

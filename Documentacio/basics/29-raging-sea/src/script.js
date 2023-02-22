@@ -39,6 +39,7 @@ debugObject.surfaceColor = '#9bd8ff'
 const waterMaterial = new THREE.ShaderMaterial({
     vertexShader: waterVertexShader,
     fragmentShader: waterFragmentShader,
+    //wireframe: true,
     uniforms:
         {
             // Animació
@@ -67,7 +68,7 @@ const waterMaterial = new THREE.ShaderMaterial({
         }
 })
 
-// Controls GUI
+// (5) Controls GUI
 gui.add(waterMaterial.uniforms.uBigWavesElevation, 'value').min(0).max(1).step(0.001).name('uBigWavesElevation')
 gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'x').min(0).max(10).step(0.001).name('uBigWavesFrequencyX')
 gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'y').min(0).max(10).step(0.001).name('uBigWavesFrequencyY')
