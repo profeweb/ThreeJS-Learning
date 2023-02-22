@@ -39,7 +39,7 @@ debugObject.surfaceColor = '#9bd8ff'
 const waterMaterial = new THREE.ShaderMaterial({
     vertexShader: waterVertexShader,
     fragmentShader: waterFragmentShader,
-    //wireframe: true,
+   // wireframe: true,
     uniforms:
         {
             // Animació
