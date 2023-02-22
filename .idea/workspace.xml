@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/28a-shader-patterns-15primers/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/28a-shader-patterns-15primers/src/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/28a-shader-patterns-15primers/src/shaders/test/fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/28a-shader-patterns-15primers/src/shaders/test/vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/28a-shader-patterns-15primers/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/28a-shader-patterns-15primers/static/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/29-raging-sea/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/29-raging-sea/src/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/29-raging-sea/src/shaders/water/fragment.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/29-raging-sea/src/shaders/water/fragment.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/29-raging-sea/src/shaders/water/vertex.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/29-raging-sea/src/shaders/water/vertex.glsl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +45,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics/29-raging-sea/src",
+    "last_opened_file_path": "C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\29-raging-sea\src" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics" />
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\29-raging-sea\src" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\temp20\static\models\Duck" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\20b-raycaster-models\static" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\temp23\static" />
@@ -143,14 +146,7 @@
       <workItem from="1676651286868" duration="10344000" />
       <workItem from="1676835117724" duration="267000" />
       <workItem from="1676882839382" duration="590000" />
-      <workItem from="1677054659583" duration="5704000" />
-    </task>
-    <task id="LOCAL-00071" summary="ThreeJS">
-      <created>1674635489234</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1674635489234</updated>
+      <workItem from="1677054659583" duration="7505000" />
     </task>
     <task id="LOCAL-00072" summary="ThreeJS">
       <created>1674637507161</created>
@@ -488,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677060157251</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="ThreeJS">
+      <created>1677060445030</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1677060445030</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
