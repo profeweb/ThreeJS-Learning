@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="ThreeJS">
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/src/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/src/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/draco/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/draco/draco_decoder.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/draco/draco_decoder.wasm" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/draco/draco_encoder.js" afterDir="false" />
@@ -15,17 +10,6 @@
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/draco/gltf/draco_decoder.wasm" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/draco/gltf/draco_encoder.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/draco/gltf/draco_wasm_wrapper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/models/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/models/LeePerrySmith/LeePerrySmith.glb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/models/LeePerrySmith/LeePerrySmith_License.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/models/LeePerrySmith/color.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/models/LeePerrySmith/normal.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/textures/environmentMaps/0/nx.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/textures/environmentMaps/0/ny.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/textures/environmentMaps/0/nz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/textures/environmentMaps/0/px.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/textures/environmentMaps/0/py.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/31-modified-materials/static/textures/environmentMaps/0/pz.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/ZIPs/31-modified-materials-final/static/draco/draco_decoder.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/ZIPs/31-modified-materials-final/static/draco/draco_decoder.wasm" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Documentacio/basics/ZIPs/31-modified-materials-final/static/draco/draco_encoder.js" afterDir="false" />
@@ -177,14 +161,7 @@
       <workItem from="1677152985723" duration="420000" />
       <workItem from="1677243165329" duration="765000" />
       <workItem from="1677310621963" duration="22000" />
-      <workItem from="1677751910176" duration="7121000" />
-    </task>
-    <task id="LOCAL-00077" summary="ThreeJS">
-      <created>1674646793024</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1674646793025</updated>
+      <workItem from="1677751910176" duration="7536000" />
     </task>
     <task id="LOCAL-00078" summary="ThreeJS">
       <created>1674648306724</created>
@@ -522,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677759055410</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="ThreeJS">
+      <created>1677759544415</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1677759544415</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
