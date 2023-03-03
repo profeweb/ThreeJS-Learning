@@ -379,7 +379,7 @@ fpFolder.add(filmPass.material.uniforms.grayscale, 'value').name('grayscale')
 
 
 const guiObject = {
-    'disable': ()=>{
+    'disableAll': ()=>{
         for(let folder of gui.children){
             for (let c  of folder.controllers) {
                 if(c._name==='enabled'){
@@ -387,10 +387,20 @@ const guiObject = {
                 }
             }
         }
+    },
+    'enableAll': ()=>{
+        for(let folder of gui.children){
+            for (let c  of folder.controllers) {
+                if(c._name==='enabled'){
+                    c.setValue(true)
+                }
+            }
+        }
     }
 }
-const eFolder = gui.addFolder('Disable')
-eFolder.add(guiObject, 'disable').name('Disable All')
+const eFolder = gui.addFolder('Enable/Disable')
+eFolder.add(guiObject, 'disableAll').name('Disable All')
+eFolder.add(guiObject, 'enableAll').name('Enable All')
 
 
 // (8.2) SMAA passada per aplicar antialiasing (en cas que el navegador suporti WebGL v2)
