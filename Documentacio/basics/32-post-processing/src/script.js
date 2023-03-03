@@ -4,6 +4,28 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import * as dat from 'lil-gui'
 
+// (1) Importar EffectComposer i RenderPass
+import {EffectComposer} from "three/examples/jsm/postprocessing/EffectComposer.js";
+import {RenderPass} from "three/examples/jsm/postprocessing/RenderPass.js";
+
+// (6) Importar altres Passades i ShaderPass
+import {DotScreenPass} from "three/examples/jsm/postprocessing/DotScreenPass.js";
+import {GlitchPass} from "three/examples/jsm/postprocessing/GlitchPass.js";
+
+// (7) Importar ShaderPass i altres passades basades en Shaders
+import {ShaderPass} from "three/examples/jsm/postprocessing/ShaderPass.js";
+import {RGBShiftShader} from "three/examples/jsm/shaders/RGBShiftShader.js";
+import {GammaCorrectionShader} from "three/examples/jsm/shaders/GammaCorrectionShader.js";
+
+// (8) Importar SMAAPass per aplicar Antialiasing
+import {SMAAPass} from "three/examples/jsm/postprocessing/SMAAPass.js";
+
+// (9) Importar UnrealBloomPass
+import {UnrealBloomPass} from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+
+// (1.1) Test de la importació
+//console.log(EffectComposer)
+
 /**
  * Base
  */
@@ -103,6 +125,10 @@ window.addEventListener('resize', () =>
     // Update renderer
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+    // (8) Update de l'effectComposer
+    effectComposer.setSize(sizes.width, sizes.height)
+    effectComposer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
 
 /**
@@ -133,6 +159,208 @@ renderer.toneMappingExposure = 1.5
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
+// (7.3) Antialias amb WebGLRenderTarget
+console.log(renderer.getPixelRatio())
+const renderTarget = new THREE.WebGLRenderTarget(
+    800,
+    600,
+    {
+        samples: renderer.getPixelRatio() === 1 ? 2 : 0
+    }
+)
+
+// (2) Instanciar i configurar l'objecte EffectComposer
+const effectComposer = new EffectComposer(renderer, renderTarget)
+effectComposer.setSize(sizes.width, sizes.height)
+effectComposer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+// (3) Instanciar l'objecte RenderPass
+const renderPass = new RenderPass(scene, camera)
+
+// (4) Afegir una passada a l'EffectComposer
+effectComposer.addPass(renderPass)
+
+// (6.2) Afegir els altres passades a l'effectComposer (DotScreenPass, GitchPass, ...)
+const dotScreenPass = new DotScreenPass()
+dotScreenPass.enabled = false
+effectComposer.addPass(dotScreenPass)
+
+const glitchPass = new GlitchPass()
+glitchPass.enabled = false
+glitchPass.goWild = false
+effectComposer.addPass(glitchPass)
+
+// (6.2a) Afegir Paràmetres del DotScreenPass al GUI controls
+const dsFolder = gui.addFolder('DotScreenPass')
+dsFolder.add(dotScreenPass, 'enabled')
+
+// (6.2b) Afegir Paràmetres del GlitchPass al GUI controls
+const gpFolder = gui.addFolder('GlitchPass')
+gpFolder.add(glitchPass, 'enabled')
+gpFolder.add(glitchPass, 'goWild')
+
+//(7.2) Afegir passades a través del ShaderPass (RGBShifShader, GammaCorrectionShader, ...)
+const rgbShiftPass = new ShaderPass(RGBShiftShader)
+rgbShiftPass.enabled = false
+effectComposer.addPass(rgbShiftPass)
+
+const gammaCorrectionPass = new ShaderPass(GammaCorrectionShader)
+gammaCorrectionPass.enabled = true;
+effectComposer.addPass(gammaCorrectionPass)
+
+// (7.2a) Afegir Paràmetres del RGBShifPassal GUI controls
+const rgbspFolder = gui.addFolder('RGBShiftPass')
+rgbspFolder.add(rgbShiftPass, 'enabled')
+
+// (7.2b) Afegir Paràmetres del RGBShifPassal GUI controls
+const gcpFolder = gui.addFolder('GammaCorrectionPass')
+gcpFolder.add(gammaCorrectionPass, 'enabled')
+
+// (9.2) Unreal Bloom Pass
+const unrealBloomPass = new UnrealBloomPass()
+unrealBloomPass.strength = 0.3
+unrealBloomPass.radius = 1
+unrealBloomPass.threshold = 0.6
+unrealBloomPass.enabled = true
+effectComposer.addPass(unrealBloomPass)
+
+// (9.3) Afegir Paràmetres de l'UnrealBloomPass al GUI controls
+const ubpFolder = gui.addFolder('UnrealBloomPass')
+ubpFolder.add(unrealBloomPass, 'enabled')
+ubpFolder.add(unrealBloomPass, 'strength').min(0).max(2).step(0.001)
+ubpFolder.add(unrealBloomPass, 'radius').min(0).max(2).step(0.001)
+ubpFolder.add(unrealBloomPass, 'threshold').min(0).max(1).step(0.001)
+
+// (10) Crear un custom Pass TintPass (amb uniforms, vertexShader i fragmentShader)
+const TintShader = {
+    uniforms: {
+        tDiffuse: { value: null },
+        uTint: { value: null }
+    },
+    vertexShader:
+        `
+            varying vec2 vUv;
+            void main(){
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                vUv = uv;
+            }
+        `,
+    fragmentShader:
+        `
+            uniform sampler2D tDiffuse;
+            uniform vec3 uTint;
+            varying vec2 vUv;
+            
+            void main(){
+                vec4 color = texture2D(tDiffuse, vUv);
+                color.rgb += uTint;
+                gl_FragColor = color;
+            }
+        `,
+}
+const tintPass = new ShaderPass(TintShader)
+tintPass.material.uniforms.uTint.value = new THREE.Vector3()
+effectComposer.addPass(tintPass)
+
+// (10.2) Afegir Paràmetres del TintPass al GUI controls
+const tpFolder = gui.addFolder('TintPass')
+tpFolder.add(tintPass, 'enabled')
+tpFolder.add(tintPass.material.uniforms.uTint.value, 'x').min(-1).max(1).step(0.001).name('Red')
+tpFolder.add(tintPass.material.uniforms.uTint.value, 'y').min(-1).max(1).step(0.001).name('Green')
+tpFolder.add(tintPass.material.uniforms.uTint.value, 'z').min(-1).max(1).step(0.001).name('Blue')
+
+// (11) Crear un custom Pass DisplacementPass (amb uniforms, vertexShader i fragmentShader)
+const DisplacementShader = {
+    uniforms: {
+        tDiffuse: { value: null },
+        uTime: { value: null}
+    },
+    vertexShader:
+        `
+            varying vec2 vUv;
+            void main(){
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                vUv = uv;
+            }
+        `,
+    fragmentShader:
+        `
+            uniform sampler2D tDiffuse;
+            uniform float uTime;
+            varying vec2 vUv;
+            
+            void main(){
+                vec2 newUv = vec2( 
+                    vUv.x, 
+                    vUv.y + sin(vUv.x*10.0 + uTime)*0.1
+                    );
+                newUv.y += 0.1;
+                vec4 color = texture2D(tDiffuse, newUv);
+                gl_FragColor = color;
+            }
+        `,
+}
+const displacementPass = new ShaderPass(DisplacementShader)
+displacementPass.material.uniforms.uTime.value = 0
+effectComposer.addPass(displacementPass)
+
+// (11.2) Afegir Paràmetres del DisplacementPass al GUI controls
+const dpFolder = gui.addFolder('DisplacementPass')
+dpFolder.add(displacementPass, 'enabled')
+
+// (12) Crear un custom Pass NormalMapPass (amb uniforms, vertexShader i fragmentShader)
+const normalMapShader = {
+    uniforms: {
+        tDiffuse: { value: null },
+        uNormalMap: { value : null }
+    },
+    vertexShader:
+        `
+            varying vec2 vUv;
+            void main(){
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                vUv = uv;
+            }
+        `,
+    fragmentShader:
+        `
+            uniform sampler2D tDiffuse;
+            uniform sampler2D uNormalMap;
+            varying vec2 vUv;
+            
+            void main(){
+            
+                vec3 normalColor = texture2D(uNormalMap, vUv).xyz * 2.0 - 1.0;
+                
+                vec2 newUv = vUv + normalColor.xy * 0.1;
+                vec4 color = texture2D(tDiffuse, newUv);
+                
+                vec3 lightDirection = normalize(vec3(-1.0, 1.0, 0.0));
+                float lightness = clamp(dot(normalColor, lightDirection), 0.0, 1.0);
+                color.rgb += lightness * 2.0;
+                
+                gl_FragColor = color;
+            }
+        `,
+}
+const normalMapPass = new ShaderPass(normalMapShader)
+normalMapPass.material.uniforms.uNormalMap.value = textureLoader.load('/textures/interfaceNormalMap.png')
+effectComposer.addPass(normalMapPass)
+
+// (11.2) Afegir Paràmetres del NormalMapPass al GUI controls
+const nmpFolder = gui.addFolder('NormalMapPass')
+nmpFolder.add(normalMapPass, 'enabled')
+
+
+// (8.2) SMAA passada per aplicar antialiasing (en cas que el navegador suporti WebGL v2)
+console.log("Pixel ratio: ",renderer.getPixelRatio())
+if(renderer.getPixelRatio()===1 && !renderer.capabilities.isWebGL2) {
+    const smaaPass = new SMAAPass()
+    effectComposer.addPass(smaaPass)
+    console.log('SMAA Aplicat')
+}
+
+
 /**
  * Animate
  */
@@ -142,11 +370,16 @@ const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
 
+    // Update paràmetres de Passes
+    displacementPass.material.uniforms.uTime.value = elapsedTime
+
     // Update controls
     controls.update()
 
     // Render
     renderer.render(scene, camera)
+    // (5) Canvi del renderer per l'effectComposer
+    effectComposer.render()
 
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
