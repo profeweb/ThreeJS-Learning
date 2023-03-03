@@ -23,6 +23,9 @@ import {SMAAPass} from "three/examples/jsm/postprocessing/SMAAPass.js";
 // (9) Importar UnrealBloomPass
 import {UnrealBloomPass} from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 
+// (13) Importar FilmPass
+import { FilmPass } from 'three/examples/jsm/postprocessing//FilmPass.js';
+
 // (1.1) Test de la importació
 //console.log(EffectComposer)
 
@@ -193,6 +196,8 @@ effectComposer.addPass(glitchPass)
 // (6.2a) Afegir Paràmetres del DotScreenPass al GUI controls
 const dsFolder = gui.addFolder('DotScreenPass')
 dsFolder.add(dotScreenPass, 'enabled')
+dsFolder.add(dotScreenPass.material.uniforms.scale, 'value').min(0.1).max(2).step(0.001).name('scale')
+dsFolder.add(dotScreenPass.material.uniforms.angle, 'value').min(-Math.PI).max(Math.PI).step(0.001).name('angle')
 
 // (6.2b) Afegir Paràmetres del GlitchPass al GUI controls
 const gpFolder = gui.addFolder('GlitchPass')
@@ -273,7 +278,8 @@ tpFolder.add(tintPass.material.uniforms.uTint.value, 'z').min(-1).max(1).step(0.
 const DisplacementShader = {
     uniforms: {
         tDiffuse: { value: null },
-        uTime: { value: null}
+        uTime: { value: null},
+        uDisplaceDistance: {value: null}
     },
     vertexShader:
         `
@@ -287,14 +293,15 @@ const DisplacementShader = {
         `
             uniform sampler2D tDiffuse;
             uniform float uTime;
+            uniform float uDisplaceDistance;
             varying vec2 vUv;
             
             void main(){
                 vec2 newUv = vec2( 
                     vUv.x, 
-                    vUv.y + sin(vUv.x*10.0 + uTime)*0.1
+                    vUv.y + sin(vUv.x*10.0 + uTime) * uDisplaceDistance
                     );
-                newUv.y += 0.1;
+                //newUv.y += uDisplaceDistance;
                 vec4 color = texture2D(tDiffuse, newUv);
                 gl_FragColor = color;
             }
@@ -302,17 +309,20 @@ const DisplacementShader = {
 }
 const displacementPass = new ShaderPass(DisplacementShader)
 displacementPass.material.uniforms.uTime.value = 0
+displacementPass.material.uniforms.uDisplaceDistance.value = 0.1
 effectComposer.addPass(displacementPass)
 
 // (11.2) Afegir Paràmetres del DisplacementPass al GUI controls
 const dpFolder = gui.addFolder('DisplacementPass')
 dpFolder.add(displacementPass, 'enabled')
+dpFolder.add(displacementPass.material.uniforms.uDisplaceDistance, 'value').min(-1).max(1).step(0.001).name('Displace Distance')
 
 // (12) Crear un custom Pass NormalMapPass (amb uniforms, vertexShader i fragmentShader)
 const normalMapShader = {
     uniforms: {
         tDiffuse: { value: null },
-        uNormalMap: { value : null }
+        uNormalMap: { value : null },
+        uLightStrength: { value: null}
     },
     vertexShader:
         `
@@ -326,6 +336,7 @@ const normalMapShader = {
         `
             uniform sampler2D tDiffuse;
             uniform sampler2D uNormalMap;
+            uniform float uLightStrength;
             varying vec2 vUv;
             
             void main(){
@@ -337,7 +348,7 @@ const normalMapShader = {
                 
                 vec3 lightDirection = normalize(vec3(-1.0, 1.0, 0.0));
                 float lightness = clamp(dot(normalColor, lightDirection), 0.0, 1.0);
-                color.rgb += lightness * 2.0;
+                color.rgb += lightness * uLightStrength;
                 
                 gl_FragColor = color;
             }
@@ -345,11 +356,41 @@ const normalMapShader = {
 }
 const normalMapPass = new ShaderPass(normalMapShader)
 normalMapPass.material.uniforms.uNormalMap.value = textureLoader.load('/textures/interfaceNormalMap.png')
+normalMapPass.material.uniforms.uLightStrength.value = 2.0
 effectComposer.addPass(normalMapPass)
 
 // (11.2) Afegir Paràmetres del NormalMapPass al GUI controls
 const nmpFolder = gui.addFolder('NormalMapPass')
 nmpFolder.add(normalMapPass, 'enabled')
+nmpFolder.add(normalMapPass.material.uniforms.uLightStrength, 'value').min(0).max(5).step(0.001).name('Light Strength')
+
+// (13.2) Film Pass (noiseIntensity, scanlinesIntensity, scanlinesCount, grayscale)
+const filmPass = new FilmPass( 0.35, 0.025, 648, false )
+filmPass.enabled = true
+effectComposer.addPass(filmPass)
+
+// (13.2b) Afegir Paràmetres del FilmPass al GUI controls
+const fpFolder = gui.addFolder('FilmPass')
+fpFolder.add(filmPass, 'enabled')
+fpFolder.add(filmPass.material.uniforms.nIntensity, 'value').min(0).max(1).step(0.001).name('noiseIntensity')
+fpFolder.add(filmPass.material.uniforms.sIntensity, 'value').min(0).max(1).step(0.001).name('scanLineIntensity')
+fpFolder.add(filmPass.material.uniforms.sCount, 'value').min(100).max(1000).step(1).name('scanLinesCount')
+fpFolder.add(filmPass.material.uniforms.grayscale, 'value').name('grayscale')
+
+
+const guiObject = {
+    'disable': ()=>{
+        for(let folder of gui.children){
+            for (let c  of folder.controllers) {
+                if(c._name==='enabled'){
+                    c.setValue(false)
+                }
+            }
+        }
+    }
+}
+const eFolder = gui.addFolder('Disable')
+eFolder.add(guiObject, 'disable').name('Disable All')
 
 
 // (8.2) SMAA passada per aplicar antialiasing (en cas que el navegador suporti WebGL v2)
