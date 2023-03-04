@@ -198,6 +198,8 @@ const dsFolder = gui.addFolder('DotScreenPass')
 dsFolder.add(dotScreenPass, 'enabled')
 dsFolder.add(dotScreenPass.material.uniforms.scale, 'value').min(0.1).max(2).step(0.001).name('scale')
 dsFolder.add(dotScreenPass.material.uniforms.angle, 'value').min(-Math.PI).max(Math.PI).step(0.001).name('angle')
+dsFolder.add(dotScreenPass.uniforms.center.value, 'x').min(-50).max(50).step(0.001).name('center X')
+dsFolder.add(dotScreenPass.uniforms.center.value, 'y').min(-50).max(50).step(0.001).name('center Y')
 
 // (6.2b) Afegir Paràmetres del GlitchPass al GUI controls
 const gpFolder = gui.addFolder('GlitchPass')
@@ -216,6 +218,7 @@ effectComposer.addPass(gammaCorrectionPass)
 // (7.2a) Afegir Paràmetres del RGBShifPassal GUI controls
 const rgbspFolder = gui.addFolder('RGBShiftPass')
 rgbspFolder.add(rgbShiftPass, 'enabled')
+rgbspFolder.add(rgbShiftPass.material.uniforms.amount, 'value').min(0).max(1).step(0.0001).name('amount')
 
 // (7.2b) Afegir Paràmetres del RGBShifPassal GUI controls
 const gcpFolder = gui.addFolder('GammaCorrectionPass')
