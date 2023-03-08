@@ -10,7 +10,6 @@ import { gsap } from 'gsap'
 const loadingBarElement = document.querySelector('.loading-bar')
 
 let sceneReady = false
-let pointsReady = false
 
 const loadingManager = new THREE.LoadingManager(
     // Carregat
@@ -35,13 +34,64 @@ const loadingManager = new THREE.LoadingManager(
     // Progrés
     (itemUrl, itemsLoaded, itemsTotal) =>
     {
-        // Calcula el progrés i actaulitza la loadingBarElement
+        // Calcula el progrés i actualitza la loadingBarElement
         const progressRatio = itemsLoaded / itemsTotal
         loadingBarElement.style.transform = `scaleX(${progressRatio})`
     }
 )
 const gltfLoader = new GLTFLoader(loadingManager)
 const cubeTextureLoader = new THREE.CubeTextureLoader(loadingManager)
+
+// (1) Definir l'array de punts d'interés
+let points = []
+
+// Càrrega de dades JSON amb FileLoader
+const loader = new THREE.FileLoader();
+loader.load(
+    // resource URL
+    'data/points.json',
+
+    // onLoad
+     ( data )=> {
+
+        // console.log(data)
+        const dataPoints = JSON.parse(data);
+        //console.log(points)
+        for(const dataPoint of dataPoints){
+
+             const newPointDiv = document.createElement("div");
+             newPointDiv.setAttribute('class', 'point point-'+dataPoint.number)
+
+             const newLabelDiv = document.createElement("div");
+             newLabelDiv.setAttribute('class', 'label')
+             newLabelDiv.innerText = dataPoint.number
+             newPointDiv.appendChild(newLabelDiv)
+
+             const newTextDiv = document.createElement("div");
+             newTextDiv.setAttribute('class', 'text')
+             newTextDiv.innerText = dataPoint.text
+             newPointDiv.appendChild(newTextDiv)
+
+             document.querySelector('body').appendChild(newPointDiv)
+
+            const newPoint = {}
+            newPoint.position = new THREE.Vector3(dataPoint.position.x, dataPoint.position.y, dataPoint.position.z)
+            newPoint.element = newPointDiv
+            newPoint.text = dataPoint.text
+            newPoint.number = dataPoint.number
+            points.push(newPoint)
+         }
+
+    },
+    // onProgress
+    ( xhr )=> {
+        console.log( (xhr.loaded / xhr.total * 100) + '% ' );
+    },
+    // onError
+    ( err )=> {
+        console.error( 'Error' );
+    }
+);
 
 /**
  * Base
@@ -139,55 +189,7 @@ gltfLoader.load(
 // (3) Definir el Raycaster
 const raycaster = new THREE.Raycaster()
 
-// (1) Definir l'array de punts d'interés
-const points = [
-    {
-        position: new THREE.Vector3(1.55, 0.3, - 0.6),
-        element: null,
-        text: "Front and top screen with HUD aggregating terrain and battle informations.",
-        number: 0
-    },
-    {
-        position: new THREE.Vector3(0.5, 0.8, - 1.6),
-        element: null,
-        text: "Ventilation with air purifier and detection of environment toxicity.",
-        number: 1
-    },
-    {
-        position: new THREE.Vector3(1.6, - 1.3, - 0.7),
-        element: null,
-        text: "Cameras supporting night vision and heat vision with automatic adjustment.",
-        number: 2
-    }
-]
 
-// Actualitza el codi HTML amb la informació de l'array de punts
-function addPointstoHTML(){
-    for(const point of points){
-
-        const newPointDiv = document.createElement("div");
-        newPointDiv.setAttribute('class', 'point point-'+point.number)
-        point.element = newPointDiv
-
-        const newLabelDiv = document.createElement("div");
-        newLabelDiv.setAttribute('class', 'label')
-        newLabelDiv.innerText = point.number
-        newPointDiv.appendChild(newLabelDiv)
-
-        const newTextDiv = document.createElement("div");
-        newTextDiv.setAttribute('class', 'text')
-        newTextDiv.innerText = point.text
-        newPointDiv.appendChild(newTextDiv)
-
-        document.querySelector('body').appendChild(newPointDiv)
-    }
-
-    pointsReady = true
-}
-
-addPointstoHTML()
-
-// console.log(points)
 
 /**
  * Lights
@@ -261,7 +263,7 @@ const tick = () =>
     // (2) Actualitzar la posició del punts dins l'escene
 
     // Update points quan l'escena està completament carregada
-    if(sceneReady && pointsReady)
+    if(sceneReady)
     {
         // (2.1) Recorre cada punt de l'array
         for(const point of points)

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/35b-mixing-html-and-webgl - js data/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/35b-mixing-html-and-webgl - js data/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,14 +155,8 @@
       <workItem from="1677864210831" duration="9376000" />
       <workItem from="1677926227126" duration="466000" />
       <workItem from="1678263890090" duration="8229000" />
-      <workItem from="1678275749151" duration="1409000" />
-    </task>
-    <task id="LOCAL-00089" summary="ThreeJS">
-      <created>1675362018176</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1675362018176</updated>
+      <workItem from="1678275749151" duration="1836000" />
+      <workItem from="1678278533965" duration="2375000" />
     </task>
     <task id="LOCAL-00090" summary="ThreeJS">
       <created>1675408842504</created>
@@ -499,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678275538900</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="ThreeJS">
+      <created>1678277367848</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1678277367849</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

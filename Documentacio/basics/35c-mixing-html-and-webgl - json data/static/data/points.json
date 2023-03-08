@@ -1,0 +1,29 @@
+[
+  {
+    "position": {
+      "x": 1.55,
+      "y": 0.3,
+      "z": -0.6
+    },
+    "text": "Front and top screen with HUD aggregating terrain and battle informations.",
+    "number": 0
+  },
+  {
+    "position": {
+      "x": 0.5,
+      "y": 0.8,
+      "z": -1.6
+    },
+    "text": "Ventilation with air purifier and detection of environment toxicity.",
+    "number": 1
+  },
+  {
+    "position": {
+      "x": 1.6,
+      "y": -1.3,
+      "z": -0.7
+    },
+    "text": "Cameras supporting night vision and heat vision with automatic adjustment.",
+    "number": 2
+  }
+]
