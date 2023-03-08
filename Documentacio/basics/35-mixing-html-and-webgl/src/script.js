@@ -11,13 +11,13 @@ const loadingBarElement = document.querySelector('.loading-bar')
 
 let sceneReady = false
 const loadingManager = new THREE.LoadingManager(
-    // Loaded
+    // Carregat
     () =>
     {
-        // Wait a little
+        // Esperar un moment
         window.setTimeout(() =>
         {
-            // Animate overlay
+            // Anima overlay
             gsap.to(overlayMaterial.uniforms.uAlpha, { duration: 3, value: 0, delay: 1 })
 
             // Update loadingBarElement
@@ -31,10 +31,10 @@ const loadingManager = new THREE.LoadingManager(
         }, 2000)
     },
 
-    // Progress
+    // Progrés
     (itemUrl, itemsLoaded, itemsTotal) =>
     {
-        // Calculate the progress and update the loadingBarElement
+        // Calcula el progrés i actaulitza la loadingBarElement
         const progressRatio = itemsLoaded / itemsTotal
         loadingBarElement.style.transform = `scaleX(${progressRatio})`
     }
@@ -84,7 +84,7 @@ const overlay = new THREE.Mesh(overlayGeometry, overlayMaterial)
 scene.add(overlay)
 
 /**
- * Update all materials
+ * Update de tots els materials
  */
 const updateAllMaterials = () =>
 {
@@ -136,7 +136,7 @@ gltfLoader.load(
 )
 
 /**
- * Points of interest
+ * Punts d'Interés
  */
 const raycaster = new THREE.Raycaster()
 const points = [
@@ -191,7 +191,6 @@ window.addEventListener('resize', () =>
 /**
  * Camera
  */
-// Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
 camera.position.set(4, 1, - 4)
 scene.add(camera)
@@ -217,51 +216,51 @@ renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 /**
- * Animate
+ * Animar
  */
 const tick = () =>
 {
     // Update controls
     controls.update()
 
-    // Update points only when the scene is ready
+    // Update points quna l'escena està completament carregada
     if(sceneReady)
     {
-        // Go through each point
+        // Recorre cada punt de l'array
         for(const point of points)
         {
-            // Get 2D screen position
+            // Obtenir la posició 2D de la pantalla
             const screenPosition = point.position.clone()
             screenPosition.project(camera)
     
-            // Set the raycaster
+            // Tirar el raycaster
             raycaster.setFromCamera(screenPosition, camera)
             const intersects = raycaster.intersectObjects(scene.children, true)
     
-            // No intersect found
+            // Si no hi ha interseccions
             if(intersects.length === 0)
             {
-                // Show
+                // Fer visible
                 point.element.classList.add('visible')
             }
 
-            // Intersect found
+            // Intersecció trobada
             else
             {
-                // Get the distance of the intersection and the distance of the point
+                // Calcular la distància entre la intersecció i la distància del punt
                 const intersectionDistance = intersects[0].distance
                 const pointDistance = point.position.distanceTo(camera.position)
     
-                // Intersection is close than the point
+                // Intersecció és més a prop que el punt
                 if(intersectionDistance < pointDistance)
                 {
-                    // Hide
+                    // Amagar
                     point.element.classList.remove('visible')
                 }
-                // Intersection is further than the point
+                // Intersecció és més lluny que el punt
                 else
                 {
-                    // Show
+                    // Mostrar
                     point.element.classList.add('visible')
                 }
             }
@@ -275,7 +274,7 @@ const tick = () =>
     // Render
     renderer.render(scene, camera)
 
-    // Call tick again on the next frame
+    // Cridar a la funció tick a cada fotograma
     window.requestAnimationFrame(tick)
 }
 
