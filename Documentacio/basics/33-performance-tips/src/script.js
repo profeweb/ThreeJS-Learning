@@ -153,18 +153,18 @@ const tick = () =>
 tick()
 
 /**
- * Tips
+ * Consells de Rendiment
  */
 
-// // Tip 4
+// // Consell 4
 // console.log(renderer.info)
 
-// // Tip 6
+// // Consell 6
 // scene.remove(cube)
 // cube.geometry.dispose()
 // cube.material.dispose()
 
-// // Tip 10
+// // Consell 10
 // directionalLight.shadow.camera.top = 3
 // directionalLight.shadow.camera.right = 6
 // directionalLight.shadow.camera.left = - 6
@@ -175,7 +175,7 @@ tick()
 // const cameraHelper = new THREE.CameraHelper(directionalLight.shadow.camera)
 // scene.add(cameraHelper)
 
-// // Tip 11
+// // Consell 11
 // cube.castShadow = true
 // cube.receiveShadow = false
 
@@ -188,11 +188,11 @@ tick()
 // floor.castShadow = false
 // floor.receiveShadow = true
 
-// // Tip 12
+// // Consell 12
 // renderer.shadowMap.autoUpdate = false
 // renderer.shadowMap.needsUpdate = true
 
-// // Tip 18
+// // Consell 18
 // const geometry = new THREE.BoxGeometry(0.5, 0.5, 0.5)
 
 // for(let i = 0; i < 50; i++)
@@ -209,7 +209,7 @@ tick()
 //     scene.add(mesh)
 // }
 
-// Tip 19
+// Consell 19
 const geometries = []
 
 for(let i = 0; i < 50; i++)
@@ -233,7 +233,7 @@ const material = new THREE.MeshNormalMaterial()
 const mesh = new THREE.Mesh(mergedGeometry, material)
 scene.add(mesh)
 
-// // Tip 20
+// // Consell 20
 // const geometry = new THREE.BoxGeometry(0.5, 0.5, 0.5)
 // const material = new THREE.MeshNormalMaterial()
 
@@ -249,7 +249,7 @@ scene.add(mesh)
 //     scene.add(mesh)
 // }
 
-// // Tip 22
+// // Consell 22
 // const geometry = new THREE.BoxGeometry(0.5, 0.5, 0.5)
 // const material = new THREE.MeshNormalMaterial()
 
@@ -278,10 +278,10 @@ scene.add(mesh)
 //     mesh.setMatrixAt(i, matrix)
 // }
 
-// // Tip 29
+// // Consell 29
 // renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-// // Tip 31, 32, 34 and 35
+// // Consells 31, 32, 34 i 35
 // const shaderGeometry = new THREE.PlaneGeometry(10, 10, 256, 256)
 
 // const shaderMaterial = new THREE.ShaderMaterial({

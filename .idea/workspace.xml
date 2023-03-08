@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="" />
+    <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/33-performance-tips/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/33-performance-tips/src/script.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,13 +153,7 @@
       <workItem from="1677841903302" duration="5502000" />
       <workItem from="1677864210831" duration="9376000" />
       <workItem from="1677926227126" duration="466000" />
-    </task>
-    <task id="LOCAL-00084" summary="ThreeJS">
-      <created>1675181068229</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1675181068229</updated>
+      <workItem from="1678263890090" duration="393000" />
     </task>
     <task id="LOCAL-00085" summary="ThreeJS">
       <created>1675249184977</created>
@@ -495,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677926717012</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="ThreeJS">
+      <created>1678264069773</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1678264069774</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
