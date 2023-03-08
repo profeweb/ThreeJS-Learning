@@ -2,20 +2,27 @@ import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+
+// (3) Importar la llibreria d'animació GSAP
 import { gsap } from 'gsap'
 
-/**
- * Loaders
- */
+//(3.1) Test d'importación de GSAP
+// console.log(gsap)
+
+// (4) Accés a l'element del DOM loadingBarElement
 const loadingBarElement = document.querySelector('.loading-bar')
+
+//  (2) Gestionar tots els Loaders amb un LoadingManager
 const loadingManager = new THREE.LoadingManager(
-    // Loaded
+    // Carregats tots els assets
     () =>
     {
-        // Wait a little
+        // console.log('loaded')
+        // Espera un moment
+        // gsap.delayedCall(0.5, () =>{ ... })
         window.setTimeout(() =>
         {
-            // Animate overlay
+            // Anima overlay
             gsap.to(overlayMaterial.uniforms.uAlpha, { duration: 3, value: 0, delay: 1 })
 
             // Update loadingBarElement
@@ -24,14 +31,19 @@ const loadingManager = new THREE.LoadingManager(
         }, 500)
     },
 
-    // Progress
+    // En progrés
     (itemUrl, itemsLoaded, itemsTotal) =>
     {
-        // Calculate the progress and update the loadingBarElement
+        // console.log('progress', itemUrl, itemsLoaded, itemsTotal)
+
+        // Calcula el progrés i update del loadingBarElement
+        // console.log(itemsLoaded / itemsTotal)
         const progressRatio = itemsLoaded / itemsTotal
+        //loadingBarElement.style.transform = 'scaleX('+progressRatio+')'
         loadingBarElement.style.transform = `scaleX(${progressRatio})`
     }
 )
+
 const gltfLoader = new GLTFLoader(loadingManager)
 const cubeTextureLoader = new THREE.CubeTextureLoader(loadingManager)
 
@@ -47,28 +59,26 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
-/**
- * Overlay
- */
+// (1) Pla d'Overlay ///////////////////////////////////////////////////////////////////////////
+// (1.1) Geometria de Pla
 const overlayGeometry = new THREE.PlaneGeometry(2, 2, 1, 1)
+// (1.2) Material del Pla (MeshBasicMaterial vs ShaderMaterial)
+// const overlayMaterial = new THREE.MeshBasicMaterial({color:0xff0000})
 const overlayMaterial = new THREE.ShaderMaterial({
     // wireframe: true,
     transparent: true,
-    uniforms:
-    {
+    uniforms: {
         uAlpha: { value: 1 }
     },
     vertexShader: `
-        void main()
-        {
+        void main() {
             gl_Position = vec4(position, 1.0);
         }
     `,
     fragmentShader: `
         uniform float uAlpha;
 
-        void main()
-        {
+        void main() {
             gl_FragColor = vec4(0.0, 0.0, 0.0, uAlpha);
         }
     `

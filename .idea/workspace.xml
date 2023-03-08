@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/34-intro-and-loading-progress/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/34-intro-and-loading-progress/src/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/35-mixing-html-and-webgl/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/35-mixing-html-and-webgl/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/35-mixing-html-and-webgl/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/35-mixing-html-and-webgl/src/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/35-mixing-html-and-webgl/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/35-mixing-html-and-webgl/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/34-intro-and-loading-progress/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/34-intro-and-loading-progress/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/34-intro-and-loading-progress/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/34-intro-and-loading-progress/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,14 +155,7 @@
       <workItem from="1677841903302" duration="5502000" />
       <workItem from="1677864210831" duration="9376000" />
       <workItem from="1677926227126" duration="466000" />
-      <workItem from="1678263890090" duration="2083000" />
-    </task>
-    <task id="LOCAL-00086" summary="ThreeJS">
-      <created>1675249972272</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1675249972272</updated>
+      <workItem from="1678263890090" duration="5414000" />
     </task>
     <task id="LOCAL-00087" summary="ThreeJS">
       <created>1675257102982</created>
@@ -502,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678264941821</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="ThreeJS">
+      <created>1678266143156</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1678266143156</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
