@@ -25,8 +25,7 @@ const loadingManager = new THREE.LoadingManager(
             loadingBarElement.style.transform = ''
         }, 500)
 
-        window.setTimeout(() =>
-        {
+        window.setTimeout(() => {
             sceneReady = true
         }, 2000)
     },
@@ -135,10 +134,10 @@ gltfLoader.load(
     }
 )
 
-/**
- * Punts d'Interés
- */
+// (3) Definir el Raycaster
 const raycaster = new THREE.Raycaster()
+
+// (1) Definir l'array de unts d'interés
 const points = [
     {
         position: new THREE.Vector3(1.55, 0.3, - 0.6),
@@ -153,6 +152,8 @@ const points = [
         element: document.querySelector('.point-2')
     }
 ]
+
+// console.log(points)
 
 /**
  * Lights
@@ -223,28 +224,30 @@ const tick = () =>
     // Update controls
     controls.update()
 
-    // Update points quna l'escena està completament carregada
+    // (2) Actualitzar la posició del punts dins l'escene
+
+    // Update points quan l'escena està completament carregada
     if(sceneReady)
     {
-        // Recorre cada punt de l'array
+        // (2.1) Recorre cada punt de l'array
         for(const point of points)
         {
-            // Obtenir la posició 2D de la pantalla
+            // (2.2) Obtenir la posició 2D de la pantalla
             const screenPosition = point.position.clone()
             screenPosition.project(camera)
     
-            // Tirar el raycaster
+            // (3.1) Tirar el raycaster
             raycaster.setFromCamera(screenPosition, camera)
             const intersects = raycaster.intersectObjects(scene.children, true)
     
-            // Si no hi ha interseccions
+            // (3.2) Si no hi ha interseccions
             if(intersects.length === 0)
             {
                 // Fer visible
                 point.element.classList.add('visible')
             }
 
-            // Intersecció trobada
+            // (3.3) Intersecció trobada
             else
             {
                 // Calcular la distància entre la intersecció i la distància del punt
@@ -264,7 +267,8 @@ const tick = () =>
                     point.element.classList.add('visible')
                 }
             }
-    
+
+            // Actualitza la posició del punt
             const translateX = screenPosition.x * sizes.width * 0.5
             const translateY = - screenPosition.y * sizes.height * 0.5
             point.element.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`

@@ -59,6 +59,7 @@ html, body {
 }
 
 .point .text {
+    /* display: none; */
     position: absolute;
     top: 30px;
     left: -120px;
