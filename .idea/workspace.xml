@@ -2,8 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/Camera.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/Experience.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/Renderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/Utils/Debug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/Utils/EventEmitter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/Utils/Resources.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/Utils/Sizes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/Utils/Time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/World/Environment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/World/Floor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/World/Fox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/World/World.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/Experience/sources.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/draco/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/draco/draco_decoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/draco/draco_decoder.wasm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/draco/draco_encoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/draco/draco_wasm_wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/draco/gltf/draco_decoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/draco/gltf/draco_decoder.wasm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/draco/gltf/draco_encoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/draco/gltf/draco_wasm_wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/models/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/models/Fox/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/models/Fox/glTF-Binary/Fox.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/models/Fox/glTF-Embedded/Fox.gltf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/models/Fox/glTF/Fox.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/models/Fox/glTF/Fox.gltf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/models/Fox/glTF/Texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/models/Fox/screenshot/screenshot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/textures/dirt/color.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/textures/dirt/normal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/textures/environmentMap/nx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/textures/environmentMap/ny.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/textures/environmentMap/nz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/textures/environmentMap/px.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/textures/environmentMap/py.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26-code-structuring-for-bigger-projects/static/textures/environmentMap/pz.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/35b-mixing-html-and-webgl - js data/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/35b-mixing-html-and-webgl - js data/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +81,18 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics/30-animated-galaxy/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tonim/IdeaProjects/ThreeJS-Learning/Documentacio/basics/temp35/static/data&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\temp35\static\data" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\30-animated-galaxy\src" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\29-raging-sea\src" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\temp20\static\models\Duck" />
-      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\20b-raycaster-models\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\25b-realistic-render-bias-problem\static\models" />
@@ -156,14 +197,11 @@
       <workItem from="1677926227126" duration="466000" />
       <workItem from="1678263890090" duration="8229000" />
       <workItem from="1678275749151" duration="1836000" />
-      <workItem from="1678278533965" duration="2375000" />
-    </task>
-    <task id="LOCAL-00090" summary="ThreeJS">
-      <created>1675408842504</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1675408842505</updated>
+      <workItem from="1678278533965" duration="3131000" />
+      <workItem from="1678291120014" duration="9910000" />
+      <workItem from="1678355142277" duration="612000" />
+      <workItem from="1678359407388" duration="30000" />
+      <workItem from="1678384835898" duration="404000" />
     </task>
     <task id="LOCAL-00091" summary="ThreeJS">
       <created>1675414509786</created>
@@ -501,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678277367849</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="ThreeJS">
+      <created>1678281038565</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1678281038566</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
