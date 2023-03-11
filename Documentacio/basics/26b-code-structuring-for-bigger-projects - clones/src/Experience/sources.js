@@ -26,5 +26,15 @@ export default [
         name: 'foxModel',
         type: 'gltfModel',
         path: 'models/Fox/glTF/Fox.gltf'
+    },
+    {
+        name:'helvetikerFont',
+        type:'font',
+        path:'fonts/helvetiker_regular.typeface.json'
+    },
+    {
+        name: 'matcap6',
+        type: 'texture',
+        path: 'textures/matcaps/8.png'
     }
 ]

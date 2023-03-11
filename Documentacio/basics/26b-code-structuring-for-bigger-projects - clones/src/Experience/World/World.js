@@ -3,6 +3,7 @@ import Experience from '../Experience.js'
 import Environment from './Environment.js'
 import Floor from './Floor.js'
 import Fox from './Fox.js'
+import Text from './Text.js'
 
 export default class World
 {
@@ -25,6 +26,9 @@ export default class World
                 let fox = new Fox(i)
                 this.foxes.push(fox)
             }
+
+            this.text = new Text('Wolf Land')
+
             this.environment = new Environment()
         })
     }

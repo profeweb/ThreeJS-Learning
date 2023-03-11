@@ -12,6 +12,7 @@ export default class Fox
         this.time = this.experience.time
         this.debug = this.experience.debug
 
+
         this.number = number
 
         // Debug
@@ -82,9 +83,13 @@ export default class Fox
                 playWalking: () => { this.animation.play('walking') },
                 playRunning: () => { this.animation.play('running') }
             }
+            debugObject.position = this.model.position
             this.debugFolder.add(debugObject, 'playIdle')
             this.debugFolder.add(debugObject, 'playWalking')
             this.debugFolder.add(debugObject, 'playRunning')
+            this.debugFolder.add(debugObject.position, 'x').min(-5).max(5).step(0.001).name('X')
+            this.debugFolder.add(debugObject.position, 'y').min(-5).max(5).step(0.001).name('Y')
+            this.debugFolder.add(debugObject.position, 'z').min(-5).max(5).step(0.001).name('Z')
         }
     }
 
