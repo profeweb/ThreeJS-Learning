@@ -4,7 +4,7 @@ import Experience from '../Experience.js'
 
 export default class Fox
 {
-    constructor()
+    constructor(number)
     {
         this.experience = new Experience()
         this.scene = this.experience.scene
@@ -12,10 +12,12 @@ export default class Fox
         this.time = this.experience.time
         this.debug = this.experience.debug
 
+        this.number = number
+
         // Debug
         if(this.debug.active)
         {
-            this.debugFolder = this.debug.ui.addFolder('fox')
+            this.debugFolder = this.debug.ui.addFolder(`fox ${this.number}`)
         }
 
         // Resource
@@ -27,10 +29,10 @@ export default class Fox
 
     setModel()
     {
-        //this.model = SkeletonUtils.clone(this.resource.scene)
-        this.model = this.resource.scene
+        this.model = SkeletonUtils.clone(this.resource.scene)
         this.model.scale.set(0.02, 0.02, 0.02)
-        //this.model.position.set(3* Math.floor(Math.random()*4 - 2), 0, 0)
+        this.model.position.set(3* (Math.random()*2 - 1), 0, 3* (Math.random()*2 - 1))
+        this.model.rotation.y = Math.random(2*Math.PI)
         this.scene.add(this.model)
 
         this.model.traverse((child) =>

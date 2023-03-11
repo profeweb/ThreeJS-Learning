@@ -92,7 +92,7 @@ const torusKnot = new THREE.Mesh(
 )
 torusKnot.castShadow = true
 torusKnot.receiveShadow = true
-// scene.add(torusKnot)
+//scene.add(torusKnot)
 
 const sphere = new THREE.Mesh(
     new THREE.SphereGeometry(1, 32, 32),
@@ -101,7 +101,7 @@ const sphere = new THREE.Mesh(
 sphere.position.set(5, 0, 0)
 sphere.castShadow = true
 sphere.receiveShadow = true
-// scene.add(sphere)
+//scene.add(sphere)
 
 const floor = new THREE.Mesh(
     new THREE.PlaneGeometry(10, 10),
@@ -111,18 +111,18 @@ floor.position.set(0, - 2, 0)
 floor.rotation.x = - Math.PI * 0.5
 floor.castShadow = true
 floor.receiveShadow = true
-// scene.add(floor)
+//scene.add(floor)
 
 // /**
 //  * Lights
 //  */
-// const directionalLight = new THREE.DirectionalLight('#ffffff', 1)
-// directionalLight.castShadow = true
-// directionalLight.shadow.mapSize.set(1024, 1024)
-// directionalLight.shadow.camera.far = 15
-// directionalLight.shadow.normalBias = 0.05
-// directionalLight.position.set(0.25, 3, 2.25)
-// scene.add(directionalLight)
+ const directionalLight = new THREE.DirectionalLight('#ffffff', 1)
+ directionalLight.castShadow = true
+ directionalLight.shadow.mapSize.set(1024, 1024)
+ directionalLight.shadow.camera.far = 15
+ directionalLight.shadow.normalBias = 0.05
+ directionalLight.position.set(0.25, 3, 2.25)
+ scene.add(directionalLight)
 
 /**
  * Animate
@@ -157,7 +157,7 @@ tick()
  */
 
 // // Consell 4
-// console.log(renderer.info)
+ console.log(renderer.info)
 
 // // Consell 6
 // scene.remove(cube)
@@ -212,7 +212,7 @@ tick()
 // Consell 19
 const geometries = []
 
-for(let i = 0; i < 50; i++)
+for(let i = 0; i < 5000; i++)
 {
     const geometry = new THREE.BoxGeometry(0.5, 0.5, 0.5)
 
