@@ -36,5 +36,10 @@ export default [
         name: 'matcap6',
         type: 'texture',
         path: 'textures/matcaps/8.png'
+    },
+    {
+        name: 'wolf',
+        type: 'audio',
+        path: 'audios/wolf.mp3'
     }
 ]

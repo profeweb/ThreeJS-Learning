@@ -23,9 +23,18 @@ export default class Fox
 
         // Resource
         this.resource = this.resources.items.foxModel
+        this.audioResource = this.resources.items.wolf
 
         this.setModel()
         this.setAnimation()
+        this.setAudio()
+
+        this.experience.mouse.on('mouse', () =>
+        {
+            if(!this.audio.isPlaying) {
+                this.audio.play()
+            }
+        })
     }
 
     setModel()
@@ -36,6 +45,10 @@ export default class Fox
         this.model.rotation.y = Math.random(2*Math.PI)
         this.scene.add(this.model)
 
+        if(this.number==0) {
+            this.experience.mouse.addIntersectable(this.model)
+        }
+
         this.model.traverse((child) =>
         {
             if(child instanceof THREE.Mesh)
@@ -43,6 +56,11 @@ export default class Fox
                 child.castShadow = true
             }
         })
+    }
+
+    setAudio(){
+        this.audio = new THREE.PositionalAudio( this.experience.camera.listener );
+        this.audio.setBuffer( this.audioResource );
     }
 
     setAnimation()
@@ -81,12 +99,14 @@ export default class Fox
             const debugObject = {
                 playIdle: () => { this.animation.play('idle') },
                 playWalking: () => { this.animation.play('walking') },
-                playRunning: () => { this.animation.play('running') }
+                playRunning: () => { this.animation.play('running') },
+                playSound: () => { this.audio.play() }
             }
             debugObject.position = this.model.position
             this.debugFolder.add(debugObject, 'playIdle')
             this.debugFolder.add(debugObject, 'playWalking')
             this.debugFolder.add(debugObject, 'playRunning')
+            this.debugFolder.add(debugObject, 'playSound')
             this.debugFolder.add(debugObject.position, 'x').min(-5).max(5).step(0.001).name('X')
             this.debugFolder.add(debugObject.position, 'y').min(-5).max(5).step(0.001).name('Y')
             this.debugFolder.add(debugObject.position, 'z').min(-5).max(5).step(0.001).name('Z')

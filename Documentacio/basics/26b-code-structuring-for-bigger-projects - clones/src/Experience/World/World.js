@@ -22,7 +22,7 @@ export default class World
             this.floor2 = new Floor(1, new THREE.Vector3(-3, 0, 3))
             this.floor3 = new Floor(1, new THREE.Vector3(3, 0, 3))
 
-            for(let i=0; i<5; i++) {
+            for(let i=0; i<1; i++) {
                 let fox = new Fox(i)
                 this.foxes.push(fox)
             }
