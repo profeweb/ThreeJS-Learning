@@ -27,6 +27,7 @@ export default class Resources extends EventEmitter
         this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader()
         this.loaders.fontLoader = new FontLoader()
         this.loaders.audioLoader = new THREE.AudioLoader();
+        this.loaders.fileLoader = new THREE.FileLoader();
     }
 
     startLoading()
@@ -76,6 +77,15 @@ export default class Resources extends EventEmitter
             else if(source.type === 'audio')
             {
                 this.loaders.audioLoader.load(
+                    source.path,
+                    (file) => {
+                        this.sourceLoaded(source, file)
+                    }
+                )
+            }
+            else if(source.type === 'file')
+            {
+                this.loaders.fileLoader.load(
                     source.path,
                     (file) => {
                         this.sourceLoaded(source, file)

@@ -22,8 +22,13 @@ export default class World
             this.floor2 = new Floor(1, new THREE.Vector3(-3, 0, 3))
             this.floor3 = new Floor(1, new THREE.Vector3(3, 0, 3))
 
-            for(let i=0; i<1; i++) {
+            // Positions
+            const dataInfo = JSON.parse(this.resources.items.positions);
+
+            for(let i=0; i<5; i++) {
                 let fox = new Fox(i)
+                fox.setPosition(dataInfo[i].position.x, dataInfo[i].position.y, dataInfo[i].position.z)
+                fox.setRotation(dataInfo[i].rotation.x, dataInfo[i].rotation.y, dataInfo[i].rotation.z)
                 this.foxes.push(fox)
             }
 

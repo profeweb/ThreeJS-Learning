@@ -41,5 +41,10 @@ export default [
         name: 'wolf',
         type: 'audio',
         path: 'audios/wolf.mp3'
+    },
+    {
+        name: 'positions',
+        type: 'file',
+        path: 'data/positions.json'
     }
 ]

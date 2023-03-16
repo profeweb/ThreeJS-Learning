@@ -41,13 +41,11 @@ export default class Fox
     {
         this.model = SkeletonUtils.clone(this.resource.scene)
         this.model.scale.set(0.02, 0.02, 0.02)
-        this.model.position.set(3* (Math.random()*2 - 1), 0, 3* (Math.random()*2 - 1))
-        this.model.rotation.y = Math.random(2*Math.PI)
+        //this.setPosition(3* (Math.random()*2 - 1), 0, 3* (Math.random()*2 - 1))
+        //this.setRotation(0, 0, 0)
         this.scene.add(this.model)
 
-        if(this.number==0) {
-            this.experience.mouse.addIntersectable(this.model)
-        }
+        this.experience.mouse.addIntersectable(this.model)
 
         this.model.traverse((child) =>
         {
@@ -56,6 +54,14 @@ export default class Fox
                 child.castShadow = true
             }
         })
+    }
+
+    setPosition(x, y, z){
+        this.model.position.set(x, y, z)
+    }
+
+    setRotation(x, y, z){
+        this.model.rotation.set(x, y, z)
     }
 
     setAudio(){
@@ -103,6 +109,7 @@ export default class Fox
                 playSound: () => { this.audio.play() }
             }
             debugObject.position = this.model.position
+            debugObject.rotation = this.model.rotation
             this.debugFolder.add(debugObject, 'playIdle')
             this.debugFolder.add(debugObject, 'playWalking')
             this.debugFolder.add(debugObject, 'playRunning')
@@ -110,6 +117,8 @@ export default class Fox
             this.debugFolder.add(debugObject.position, 'x').min(-5).max(5).step(0.001).name('X')
             this.debugFolder.add(debugObject.position, 'y').min(-5).max(5).step(0.001).name('Y')
             this.debugFolder.add(debugObject.position, 'z').min(-5).max(5).step(0.001).name('Z')
+
+            this.debugFolder.add(debugObject.rotation, 'y').min(-Math.PI).max(Math.PI).step(0.001).name('Rotation')
         }
     }
 
