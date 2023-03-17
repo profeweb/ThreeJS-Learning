@@ -12,7 +12,6 @@ export default class Fox
         this.time = this.experience.time
         this.debug = this.experience.debug
 
-
         this.number = number
 
         // Debug
@@ -29,9 +28,10 @@ export default class Fox
         this.setAnimation()
         this.setAudio()
 
-        this.experience.mouse.on('mouse', () =>
+        this.experience.mouse.on('fox'+this.number, () =>
         {
             if(!this.audio.isPlaying) {
+                console.log('playing fox '+this.number)
                 this.audio.play()
             }
         })
@@ -40,12 +40,11 @@ export default class Fox
     setModel()
     {
         this.model = SkeletonUtils.clone(this.resource.scene)
+        this.model.name = "fox" + this.number
         this.model.scale.set(0.02, 0.02, 0.02)
-        //this.setPosition(3* (Math.random()*2 - 1), 0, 3* (Math.random()*2 - 1))
-        //this.setRotation(0, 0, 0)
         this.scene.add(this.model)
 
-        this.experience.mouse.addIntersectable(this.model)
+        this.experience.mouse.addIntersectable(this)
 
         this.model.traverse((child) =>
         {
