@@ -4,6 +4,7 @@ import Environment from './Environment.js'
 import Floor from './Floor.js'
 import Fox from './Fox.js'
 import Text from './Text.js'
+import Moon from './Moon.js'
 
 export default class World
 {
@@ -34,6 +35,8 @@ export default class World
 
             this.text = new Text('Wolf Land')
 
+            this.moon = new Moon()
+
             this.environment = new Environment()
         })
     }
@@ -41,9 +44,15 @@ export default class World
     update()
     {
 
+        if(this.moon) {
+            this.moon.update()
+        }
+
         for(let fox of this.foxes){
                 fox.update()
         }
+
+
 
     }
 }

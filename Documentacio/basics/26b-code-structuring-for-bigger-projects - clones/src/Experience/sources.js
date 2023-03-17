@@ -46,5 +46,10 @@ export default [
         name: 'positions',
         type: 'file',
         path: 'data/positions.json'
+    },
+    {
+        name:'explosion',
+        type:'texture',
+        path:'textures/images/explosion.png'
     }
 ]
