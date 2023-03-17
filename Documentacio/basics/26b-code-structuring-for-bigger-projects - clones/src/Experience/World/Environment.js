@@ -98,4 +98,5 @@ export default class Environment
                 .onChange(this.environmentMap.updateMaterials)
         }
     }
+
 }

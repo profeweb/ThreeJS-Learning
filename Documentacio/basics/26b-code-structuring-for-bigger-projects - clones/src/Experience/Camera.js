@@ -31,8 +31,8 @@ export default class Camera
 
     setAudioListener()
     {
-        this.listener = new THREE.AudioListener();
-        this.instance.add( this.listener );
+        this.listener = new THREE.AudioListener()
+        this.instance.add( this.listener )
     }
 
     resize()

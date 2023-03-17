@@ -41,6 +41,8 @@ export default class Experience
         this.world = new World()
         this.mouse = new Mouse()
 
+        this.audioEnabled = false
+
         // Resize event
         this.sizes.on('resize', () =>
         {
@@ -51,6 +53,10 @@ export default class Experience
         this.time.on('tick', () =>
         {
             this.update()
+        })
+
+        window.addEventListener('click', (event)=>{
+            this.audioEnabled = true
         })
     }
 

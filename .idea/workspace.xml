@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/Mouse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/Moon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/shaders/moon/fragment.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/shaders/moon/vertex.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/static/textures/images/explosion.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/Camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/Camera.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/Experience.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/Experience.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/Utils/Resources.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/Utils/Resources.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/Environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/Environment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/Fox.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/Fox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/World.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/World.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,14 +183,7 @@
       <workItem from="1678895964535" duration="8984000" />
       <workItem from="1678962240565" duration="749000" />
       <workItem from="1678988759816" duration="1624000" />
-      <workItem from="1679036116218" duration="6220000" />
-    </task>
-    <task id="LOCAL-00100" summary="ThreeJS">
-      <created>1676044135710</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1676044135710</updated>
+      <workItem from="1679036116218" duration="11138000" />
     </task>
     <task id="LOCAL-00101" summary="ThreeJS">
       <created>1676045073340</created>
@@ -525,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679039317204</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="ThreeJS">
+      <created>1679042539172</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1679042539172</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
