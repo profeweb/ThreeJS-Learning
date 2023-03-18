@@ -8,6 +8,7 @@ import Renderer from './Renderer.js'
 import Mouse from './Mouse.js'
 import World from './World/World.js'
 import Resources from './Utils/Resources.js'
+import Overlay from './World/Overlay.js'
 
 import sources from './sources.js'
 
@@ -38,6 +39,7 @@ export default class Experience
         this.resources = new Resources(sources)
         this.camera = new Camera()
         this.renderer = new Renderer()
+        this.overlay = new Overlay()
         this.world = new World()
         this.mouse = new Mouse()
 

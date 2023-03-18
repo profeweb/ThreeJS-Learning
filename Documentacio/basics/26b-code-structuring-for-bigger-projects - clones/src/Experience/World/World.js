@@ -5,7 +5,6 @@ import Floor from './Floor.js'
 import Fox from './Fox.js'
 import Text from './Text.js'
 import Moon from './Moon.js'
-import Overlay from './Overlay.js'
 
 export default class World
 {
@@ -15,8 +14,6 @@ export default class World
         this.scene = this.experience.scene
         this.resources = this.experience.resources
         this.foxes = []
-
-        this.overlay = new Overlay();
 
         // Wait for resources
         this.resources.on('ready', () =>
@@ -54,7 +51,6 @@ export default class World
         for(let fox of this.foxes){
                 fox.update()
         }
-
 
 
     }

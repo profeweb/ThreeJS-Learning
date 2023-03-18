@@ -35,6 +35,7 @@ export default class Fox
                 if (this.experience.audioEnabled) {
                     this.audio.play()
                 }
+                this.next()
             }
         })
     }
@@ -126,5 +127,11 @@ export default class Fox
     update()
     {
         this.animation.mixer.update(this.time.delta * 0.001)
+    }
+
+    next(){
+        if(this.animation.actions.current == this.animation.actions.idle){
+            this.animation.actions.current = this.animation.actions.walking
+        }
     }
 }

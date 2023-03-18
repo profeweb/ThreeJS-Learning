@@ -12,10 +12,23 @@ export default class Moon
         this.scene = this.experience.scene
         this.resources = this.experience.resources
         this.time = this.experience.time
+        this.debug = this.experience.debug
 
         this.setGeometry()
         this.setMaterial()
         this.setMesh()
+
+        // Debug
+        if(this.debug.active)
+        {
+            this.debugFolder = this.debug.ui.addFolder('moon')
+
+            const debugObject = {}
+            debugObject.position = this.mesh.position
+            this.debugFolder.add(debugObject.position, 'x').min(-5).max(5).step(0.001).name('X')
+            this.debugFolder.add(debugObject.position, 'y').min(-5).max(5).step(0.001).name('Y')
+            this.debugFolder.add(debugObject.position, 'z').min(-5).max(5).step(0.001).name('Z')
+        }
     }
 
     setGeometry()
@@ -29,6 +42,7 @@ export default class Moon
             vertexShader: testVertexShader,
             fragmentShader: testFragmentShader,
             transparent: true,
+            side: THREE.DoubleSide,
             uniforms:{
                 uTime:  { value: 0},
                 tExplosion: { value: this.resources.items.explosion }
