@@ -1,7 +1,7 @@
 import './style.css'
 import * as THREE from 'three'
 
-// (1) Importar VRBUtton per abilitar el mode VR
+// (1) Importar VRBUtton per abilitar el mode VR /////////////////////////////////////////////
 import { VRButton } from 'three/examples/jsm/webxr/VRButton.js';
 
 /**
@@ -13,14 +13,10 @@ const canvas = document.querySelector('canvas.webgl')
 // Escena
 const scene = new THREE.Scene()
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-
 // Objecte(s):
 
-// Geometry
+// Geometria
 const geometry = new THREE.BoxGeometry(1, 1, 1, 1, 1, 1)
-//const geometry = new THREE.SphereGeometry(1, 32, 8)
 const material = new THREE.MeshBasicMaterial({
     color: 0xff0000,
     wireframe:true
@@ -28,8 +24,6 @@ const material = new THREE.MeshBasicMaterial({
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
-
-//////////////////////////////////////////////////////////////////////////////////////
 
 // Mides
 const sizes = {
@@ -65,7 +59,8 @@ const renderer = new THREE.WebGLRenderer({
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-// (2) Abilitar el mode XR del renderer
+
+// (2) Abilitar el mode XR del renderer //////////////////////////////////////////////////////////////////
 renderer.xr.enabled = true;
 
 // Animació
@@ -81,12 +76,12 @@ const tick = () =>
     // Render
     renderer.render(scene, camera)
 
-    // (3) Crida a tick en el proper frame (Diferent a VR)
+    // (3) Crida a tick en el proper frame (Diferent a VR) /////////////////////////////////////////////////
     //window.requestAnimationFrame(tick)
     renderer.setAnimationLoop( tick);
 }
 
 tick()
 
-// (4) Adjuntar el botó al body de la pàgina HTML
+// (4) Adjuntar el botó al body de la pàgina HTML  ////////////////////////////////////////////////////////
 document.body.appendChild( VRButton.createButton( renderer ) );
