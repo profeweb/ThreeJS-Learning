@@ -16,9 +16,6 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 
-let count = 0;
-const radius = 0.08;
-
 // Objecte(s):
 
 const room = new THREE.LineSegments(
@@ -32,8 +29,10 @@ const light = new THREE.DirectionalLight( 0xffffff );
 light.position.set( 1, 1, 1 ).normalize();
 scene.add( light );
 
+const radius = 0.08;
 const geometry = new THREE.IcosahedronGeometry( radius, 3 );
 
+let count = 0;
 for ( let i = 0; i < 200; i ++ ) {
 
     const object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );
@@ -50,6 +49,8 @@ for ( let i = 0; i < 200; i ++ ) {
     room.add( object );
 
 }
+
+console.log()
 
 
 // Mides
@@ -96,17 +97,27 @@ renderer.xr.enabled = true;
 // Controladors VR (esquerra i dreta)
 
 function onSelectStart() {
-    this.userData.isSelecting = true;
+    this.userData.isSelecting = true
 }
 
 function onSelectEnd() {
-    this.userData.isSelecting = false;
+    this.userData.isSelecting = false
+}
+
+function onSqueezeStart() {
+    this.userData.isSqueezing = true
+}
+
+function onSqueezeEnd() {
+    this.userData.isSqueezing = false
 }
 
 // Controlador 1
 const controller1 = renderer.xr.getController( 0 );
-controller1.addEventListener( 'selectstart', onSelectStart);
-controller1.addEventListener( 'selectend', onSelectEnd );
+controller1.addEventListener( 'selectstart', onSelectStart)
+controller1.addEventListener( 'selectend', onSelectEnd )
+controller1.addEventListener( 'squeezestart', onSqueezeStart);
+controller1.addEventListener( 'squeezeend', onSqueezeEnd );
 controller1.addEventListener( 'connected', function ( event ) {
     this.add( buildController( event.data ) );
 } );
@@ -116,6 +127,8 @@ scene.add(controller1)
 const controller2 = renderer.xr.getController( 1 );
 controller2.addEventListener( 'selectstart', onSelectStart);
 controller2.addEventListener( 'selectend',  onSelectEnd);
+controller2.addEventListener( 'squeezestart', onSqueezeStart);
+controller2.addEventListener( 'squeezeend', onSqueezeEnd );
 controller2.addEventListener( 'connected', function ( event ) {
     this.add( buildController( event.data ) );
 } );
@@ -162,14 +175,16 @@ function buildController( data ) {
 }
 
 
-// Afegir piolta
+// Afegir pilota
 function handleController( controller ) {
 
     if ( controller.userData.isSelecting ) {
 
-        const object = room.children[ count ++ ];
+        count++
+        const object = room.children[ count++ ];
 
-        object.position.copy( controller.position );
+        let x = controller.position
+        object.position.copy( x);
         object.userData.velocity.x = ( Math.random() - 0.5 ) * 3;
         object.userData.velocity.y = ( Math.random() - 0.5 ) * 3;
         object.userData.velocity.z = ( Math.random() - 9 );
@@ -178,6 +193,19 @@ function handleController( controller ) {
         if ( count === room.children.length ) count = 0;
 
     }
+
+    if ( controller.userData.isSqueezing ) {
+
+        console.log('Squeezing')
+        if(room.children.length>0) {
+            console.log('removed ball '+count)
+            room.children.splice(count-1, 1)
+            count--
+        }
+
+    }
+
+
 
 }
 
@@ -204,66 +232,69 @@ const tick = () =>
 
         const object = room.children[ i ];
 
-        object.position.x += object.userData.velocity.x * delta;
-        object.position.y += object.userData.velocity.y * delta;
-        object.position.z += object.userData.velocity.z * delta;
+        if(object != null) {
 
-        // manté objectes dins habitació
+            object.position.x += object.userData.velocity.x * delta;
+            object.position.y += object.userData.velocity.y * delta;
+            object.position.z += object.userData.velocity.z * delta;
 
-        if ( object.position.x < - range || object.position.x > range ) {
+            // manté objectes dins habitació
 
-            object.position.x = THREE.MathUtils.clamp( object.position.x, - range, range );
-            object.userData.velocity.x = - object.userData.velocity.x;
+            if (object.position.x < -range || object.position.x > range) {
 
-        }
-
-        if ( object.position.y < radius || object.position.y > 6 ) {
-
-            object.position.y = Math.max( object.position.y, radius );
-
-            object.userData.velocity.x *= 0.98;
-            object.userData.velocity.y = - object.userData.velocity.y * 0.8;
-            object.userData.velocity.z *= 0.98;
-
-        }
-
-        if ( object.position.z < - range || object.position.z > range ) {
-
-            object.position.z = THREE.MathUtils.clamp( object.position.z, - range, range );
-            object.userData.velocity.z = - object.userData.velocity.z;
-
-        }
-
-        // col·lisions
-        for ( let j = i + 1; j < room.children.length; j ++ ) {
-
-            const object2 = room.children[ j ];
-
-            normal.copy( object.position ).sub( object2.position );
-
-            const distance = normal.length();
-
-            if ( distance < 2 * radius ) {
-
-                normal.multiplyScalar( 0.5 * distance - radius );
-
-                object.position.sub( normal );
-                object2.position.add( normal );
-
-                normal.normalize();
-
-                relativeVelocity.copy( object.userData.velocity ).sub( object2.userData.velocity );
-
-                normal = normal.multiplyScalar( relativeVelocity.dot( normal ) );
-
-                object.userData.velocity.sub( normal );
-                object2.userData.velocity.add( normal );
+                object.position.x = THREE.MathUtils.clamp(object.position.x, -range, range);
+                object.userData.velocity.x = -object.userData.velocity.x;
 
             }
 
-        }
+            if (object.position.y < radius || object.position.y > 6) {
 
-        object.userData.velocity.y -= 9.8 * delta;
+                object.position.y = Math.max(object.position.y, radius);
+
+                object.userData.velocity.x *= 0.98;
+                object.userData.velocity.y = -object.userData.velocity.y * 0.8;
+                object.userData.velocity.z *= 0.98;
+
+            }
+
+            if (object.position.z < -range || object.position.z > range) {
+
+                object.position.z = THREE.MathUtils.clamp(object.position.z, -range, range);
+                object.userData.velocity.z = -object.userData.velocity.z;
+
+            }
+
+            // col·lisions
+            for (let j = i + 1; j < room.children.length; j++) {
+
+                const object2 = room.children[j];
+
+                normal.copy(object.position).sub(object2.position);
+
+                const distance = normal.length();
+
+                if (distance < 2 * radius) {
+
+                    normal.multiplyScalar(0.5 * distance - radius);
+
+                    object.position.sub(normal);
+                    object2.position.add(normal);
+
+                    normal.normalize();
+
+                    relativeVelocity.copy(object.userData.velocity).sub(object2.userData.velocity);
+
+                    normal = normal.multiplyScalar(relativeVelocity.dot(normal));
+
+                    object.userData.velocity.sub(normal);
+                    object2.userData.velocity.add(normal);
+
+                }
+
+            }
+
+            object.userData.velocity.y -= 9.8 * delta;
+        }
 
     }
 
