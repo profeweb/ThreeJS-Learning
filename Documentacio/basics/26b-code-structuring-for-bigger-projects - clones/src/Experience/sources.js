@@ -51,5 +51,10 @@ export default [
         name:'explosion',
         type:'texture',
         path:'textures/images/explosion.png'
+    },
+    {
+        name: 'targets',
+        type: 'file',
+        path: 'data/targets.json'
     }
 ]

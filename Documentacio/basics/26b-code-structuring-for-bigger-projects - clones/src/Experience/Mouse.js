@@ -42,7 +42,7 @@ export default class Mouse extends EventEmitter {
                     if(intersectable instanceof Fox)
                     {
                         this.trigger('fox' + intersectable.number)
-                        console.log('fox' + intersectable.number)
+                        //console.log('fox' + intersectable.number)
                     }
                 }
         }

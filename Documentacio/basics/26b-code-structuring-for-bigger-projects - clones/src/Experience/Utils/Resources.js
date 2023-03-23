@@ -62,6 +62,7 @@ export default class Resources extends EventEmitter
                     (file) =>
                     {
                         this.sourceLoaded(source, file)
+                        //console.log('Loaded ', source.path)
                     }
                 )
             }
@@ -72,6 +73,7 @@ export default class Resources extends EventEmitter
                     (file) =>
                     {
                         this.sourceLoaded(source, file)
+                        //console.log('Loaded ', source.path)
                     }
                 )
             }
@@ -82,6 +84,7 @@ export default class Resources extends EventEmitter
                     (file) =>
                     {
                         this.sourceLoaded(source, file)
+                        //console.log('Loaded ', source.path)
                     }
                 )
             }
@@ -91,6 +94,7 @@ export default class Resources extends EventEmitter
                     source.path,
                     (file) => {
                         this.sourceLoaded(source, file)
+                        //console.log('Loaded ', source.path)
                     }
                 )
             }
@@ -100,6 +104,7 @@ export default class Resources extends EventEmitter
                     source.path,
                     (file) => {
                         this.sourceLoaded(source, file)
+                        //console.log('Loaded ', source.path)
                     }
                 )
             }
@@ -109,6 +114,7 @@ export default class Resources extends EventEmitter
                     source.path,
                     (file) => {
                         this.sourceLoaded(source, file)
+                        //console.log('Loaded ', source.path)
                     }
                 )
             }

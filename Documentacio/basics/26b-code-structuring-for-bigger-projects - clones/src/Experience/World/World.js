@@ -5,6 +5,7 @@ import Floor from './Floor.js'
 import Fox from './Fox.js'
 import Text from './Text.js'
 import Moon from './Moon.js'
+import Target from "./Target";
 
 export default class World
 {
@@ -37,19 +38,27 @@ export default class World
 
             this.moon = new Moon()
 
+            this.targets = new Target()
+
             this.environment = new Environment()
         })
     }
 
     update()
     {
+        if(this.experience.ready) {
 
-        if(this.moon) {
-            this.moon.update()
-        }
+            if (this.moon) {
+                this.moon.update()
+            }
 
-        for(let fox of this.foxes){
+            for (let fox of this.foxes) {
                 fox.update()
+            }
+
+            if (this.targets) {
+                this.targets.update()
+            }
         }
 
 

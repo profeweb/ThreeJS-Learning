@@ -105,7 +105,7 @@ export default class Camera
             this.controls = new OrbitControls(this.instance, this.canvas)
             this.controls.enableDamping = true
         }
-        else if(this.tipusControls==="PointerLockControls"){
+        else if(this.tipusControls === "PointerLockControls"){
             this.velocity = new THREE.Vector3();
             this.direction = new THREE.Vector3();
             this.controls = new PointerLockControls( this.instance, document.body );

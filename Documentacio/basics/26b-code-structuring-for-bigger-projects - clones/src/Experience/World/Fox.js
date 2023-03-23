@@ -31,7 +31,7 @@ export default class Fox
         this.experience.mouse.on('fox'+this.number, () =>
         {
             if(!this.audio.isPlaying) {
-                console.log('playing fox ' + this.number)
+                //console.log('playing fox ' + this.number)
                 if (this.experience.audioEnabled) {
                     this.audio.play()
                 }
