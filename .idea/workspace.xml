@@ -2,10 +2,151 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/41-first-react-application/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/41-first-react-application/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/41-first-react-application/src/Clicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/41-first-react-application/src/People.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/41-first-react-application/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/41-first-react-application/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/42-first-r3f-application/src/CustomObject.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/42-first-r3f-application/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/42-first-r3f-application/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/42-first-r3f-application/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/42-first-r3f-application/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/43-r3f-drei/public/bangers-v20-latin-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/43-r3f-drei/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/43-r3f-drei/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/43-r3f-drei/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/43-r3f-drei/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/44-debug-a-r3f-application/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/44-debug-a-r3f-application/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/44-debug-a-r3f-application/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/44-debug-a-r3f-application/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/0/nx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/0/ny.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/0/nz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/0/px.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/0/py.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/0/pz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/1/nx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/1/ny.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/1/nz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/1/px.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/1/py.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/1/pz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/2/nx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/2/ny.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/2/nz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/2/px.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/2/py.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/2/pz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/3/nx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/3/ny.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/3/nz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/3/px.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/3/py.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/3/pz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/public/environmentMaps/the_sky_is_on_fire_2k.hdr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/45-environment-and-staging-with-r3f/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet.gltf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_GlassPlasticMat_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_GlassPlasticMat_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_GlassPlasticMat_OcclusionRoughMetal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_LeatherPartsMat_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_LeatherPartsMat_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_LeatherPartsMat_OcclusionRoughMetal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_LensesMat_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_LensesMat_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_LensesMat_OcclusionRoughMetal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_MetalPartsMat_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_MetalPartsMat_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_MetalPartsMat_OcclusionRoughMetal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_RubberWoodMat_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_RubberWoodMat_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/glTF/FlightHelmet_Materials_RubberWoodMat_OcclusionRoughMetal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/FlightHelmet/screenshot/screenshot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/Fox/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/Fox/glTF-Binary/Fox.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/Fox/glTF-Embedded/Fox.gltf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/Fox/glTF/Fox.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/Fox/glTF/Fox.gltf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/Fox/glTF/Texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/Fox/screenshot/screenshot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/draco/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/draco/draco_decoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/draco/draco_decoder.wasm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/draco/draco_encoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/draco/draco_wasm_wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/draco/gltf/draco_decoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/draco/gltf/draco_decoder.wasm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/draco/gltf/draco_encoder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/draco/gltf/draco_wasm_wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/hamburger-draco.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/public/hamburger.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/src/Fox.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/src/Hamburger.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/src/Model.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/src/Placeholder.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/46-load-models-with-r3f/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/47-3d-text-with-r3f/public/fonts/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/47-3d-text-with-r3f/public/fonts/helvetiker_regular.typeface.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/47-3d-text-with-r3f/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/47-3d-text-with-r3f/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/47-3d-text-with-r3f/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/47-3d-text-with-r3f/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/48-portal-scene-with-r3f/public/model/baked.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/48-portal-scene-with-r3f/public/model/portal.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/48-portal-scene-with-r3f/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/48-portal-scene-with-r3f/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/48-portal-scene-with-r3f/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/48-portal-scene-with-r3f/src/shaders/portal/fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/48-portal-scene-with-r3f/src/shaders/portal/vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/48-portal-scene-with-r3f/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/49-mouse-events-with-r3f/public/hamburger.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/49-mouse-events-with-r3f/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/49-mouse-events-with-r3f/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/49-mouse-events-with-r3f/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/49-mouse-events-with-r3f/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/50-post-processing-with-r3f/public/fonts/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/50-post-processing-with-r3f/public/fonts/helvetiker_regular.typeface.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/50-post-processing-with-r3f/src/Drunk.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/50-post-processing-with-r3f/src/DrunkEffect.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/50-post-processing-with-r3f/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/50-post-processing-with-r3f/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/50-post-processing-with-r3f/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/50-post-processing-with-r3f/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/51-fun-and-simple-portfolio-with-r3f/public/bangers-v20-latin-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/51-fun-and-simple-portfolio-with-r3f/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/51-fun-and-simple-portfolio-with-r3f/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/51-fun-and-simple-portfolio-with-r3f/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/51-fun-and-simple-portfolio-with-r3f/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/52-physics-with-r3f/public/hamburger.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/52-physics-with-r3f/public/hit.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/52-physics-with-r3f/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/52-physics-with-r3f/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/52-physics-with-r3f/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/52-physics-with-r3f/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/public/bebas-neue-v9-latin-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/public/hamburger.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/src/Effects.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/src/Experience.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/src/Interface.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/src/Level.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/src/Lights.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/src/Player.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/src/stores/useGame.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentacio/basics/53-create-a-game-with-r3f/src/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/Camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/Camera.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/Experience.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/Experience.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/Moon.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/Moon.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,14 +333,8 @@
       <workItem from="1679489605380" duration="4307000" />
       <workItem from="1679500797038" duration="8755000" />
       <workItem from="1679516075781" duration="7455000" />
-      <workItem from="1679567675302" duration="3042000" />
-    </task>
-    <task id="LOCAL-00108" summary="ThreeJS">
-      <created>1676550947677</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1676550947678</updated>
+      <workItem from="1679567675302" duration="3699000" />
+      <workItem from="1679576711275" duration="679000" />
     </task>
     <task id="LOCAL-00109" summary="ThreeJS">
       <created>1676566761679</created>
@@ -537,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679560899859</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="ThreeJS">
+      <created>1679573279464</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1679573279466</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
