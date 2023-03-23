@@ -41,7 +41,7 @@ export default class Moon
         this.material = new THREE.ShaderMaterial({
             vertexShader: testVertexShader,
             fragmentShader: testFragmentShader,
-            transparent: true,
+            transparent: false,
             side: THREE.DoubleSide,
             uniforms:{
                 uTime:  { value: 0},

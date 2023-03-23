@@ -9,7 +9,7 @@ import Mouse from './Mouse.js'
 import World from './World/World.js'
 import Resources from './Utils/Resources.js'
 import Overlay from './World/Overlay.js'
-import Target from './World/Target.js'
+import Composer from './Composer.js'
 
 import sources from './sources.js'
 
@@ -41,6 +41,7 @@ export default class Experience
         this.camera = new Camera("OrbitControls")
         //this.camera = new Camera("PointerLockControls")
         this.renderer = new Renderer()
+        this.composer = new Composer()
         this.overlay = new Overlay()
         this.world = new World()
         this.mouse = new Mouse()
@@ -76,7 +77,8 @@ export default class Experience
         this.mouse.update()
         this.camera.update()
         this.world.update()
-        this.renderer.update()
+        //this.renderer.update()
+        this.composer.update()
     }
 
     destroy()
