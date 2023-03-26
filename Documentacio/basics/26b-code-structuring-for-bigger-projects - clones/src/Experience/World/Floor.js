@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import * as CANNON from 'cannon-es'
 import Experience from '../Experience.js'
 
 export default class Floor
@@ -8,6 +9,7 @@ export default class Floor
         this.experience = new Experience()
         this.scene = this.experience.scene
         this.resources = this.experience.resources
+        this.world = this.experience.world
 
         this.radius = radius
         this.position = position
@@ -16,6 +18,7 @@ export default class Floor
         this.setTextures()
         this.setMaterial()
         this.setMesh()
+        this.setPhysics()
     }
 
     setGeometry()
@@ -54,5 +57,21 @@ export default class Floor
         this.mesh.position.copy(this.position)
         this.mesh.receiveShadow = true
         this.scene.add(this.mesh)
+    }
+
+    setPhysics(){
+
+        this.shape = new CANNON.Cylinder(this.radius, this.radius, 0.2, 12)
+        //this.shape = new CANNON.Plane(this.radius)
+        this.body = new CANNON.Body({ mass: 0, shape: this.shape })
+        this.body.position.copy(this.mesh.position)
+        /*
+        this.body.quaternion.setFromAxisAngle(
+            new CANNON.Vec3(1,0,0),
+            -Math.PI*0.5
+        )
+
+         */
+        this.world.physicsWorld.addBody(this.body)
     }
 }
