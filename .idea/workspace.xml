@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d69b7714-14c7-4fcf-9e48-e447c4a24a1f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/Rain.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/Rain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/World.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/26b-code-structuring-for-bigger-projects - clones/src/Experience/World/World.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacio/basics/44-debug-a-r3f-application/src/Experience.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacio/basics/44-debug-a-r3f-application/src/Experience.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +56,7 @@
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\26b-code-structuring-for-bigger-projects - clones\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\exemples" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\25b-realistic-render-bias-problem\static\models" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\basics\25b-realistic-render-bias-problem\static" />
       <recent name="C:\Users\tonim\IdeaProjects\ThreeJS-Learning\Documentacio\fundamentals\helloBoxModule" />
@@ -204,14 +202,7 @@
       <workItem from="1680070708525" duration="9094000" />
       <workItem from="1680085914093" duration="2359000" />
       <workItem from="1680099753077" duration="593000" />
-      <workItem from="1680101430859" duration="3625000" />
-    </task>
-    <task id="LOCAL-00114" summary="ThreeJS">
-      <created>1676628643889</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1676628643889</updated>
+      <workItem from="1680101430859" duration="6585000" />
     </task>
     <task id="LOCAL-00115" summary="ThreeJS">
       <created>1676628877126</created>
@@ -549,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680103458066</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="ThreeJS">
+      <created>1680107106009</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1680107106010</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
