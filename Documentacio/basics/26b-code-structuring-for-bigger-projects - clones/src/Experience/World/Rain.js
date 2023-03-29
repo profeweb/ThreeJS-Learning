@@ -68,6 +68,12 @@ export default class Rain
     }
 
     update(){
+
+        if(this.world.wind.enabled){
+            let windForce = new CANNON.Vec3(this.world.wind.x, this.world.wind.y, this.world.wind.z)
+            this.body.applyLocalForce(windForce, new CANNON.Vec3(0,0,0))
+        }
+
         if(this.body.position.y < -0.05){
             this.body.velocity.set(0,0.0,0)
             this.setRandomPosition()

@@ -17,7 +17,14 @@ export default class World
         this.scene = this.experience.scene
         this.time = this.experience.time
         this.resources = this.experience.resources
+        this.debug = this.experience.debug
         this.foxes = []
+
+        // Debug
+        if(this.debug.active)
+        {
+            this.debugFolder = this.debug.ui.addFolder('Physics')
+        }
 
         this.setPhysics()
 
@@ -53,12 +60,36 @@ export default class World
             this.environment = new Environment()
 
         })
+
+
     }
 
     setPhysics(){
 
+
+
+        this.wind = {
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            enabled: true
+        }
+
+
+
         this.physicsWorld = new CANNON.World()
         this.physicsWorld.gravity.set(0, -9.8, 0)
+
+
+        if(this.debug.active){
+            this.debugFolder.add(this.wind, 'enabled').name('Wind')
+            this.debugFolder.add(this.wind, 'x').min(-1).max(1).step(0.001).name('X wind')
+            this.debugFolder.add(this.wind, 'y').min(-1).max(1).step(0.001).name('Y wind')
+            this.debugFolder.add(this.wind, 'z').min(-1).max(1).step(0.001).name('Z wind')
+            this.debugFolder.add(this.physicsWorld.gravity, 'x').min(-10).max(10).step(0.001).name('X gravity')
+            this.debugFolder.add(this.physicsWorld.gravity, 'y').min(-10).max(10).step(0.001).name('Y gravity')
+            this.debugFolder.add(this.physicsWorld.gravity, 'z').min(-10).max(10).step(0.001).name('Z gravity')
+        }
 
         this.defaultMaterial = new CANNON.Material('default')
         this.defaultContactMaterial = new CANNON.ContactMaterial(
@@ -71,6 +102,9 @@ export default class World
         )
         this.physicsWorld.addContactMaterial(this.defaultContactMaterial)
         this.physicsWorld.defaultContactMaterial = this.defaultContactMaterial
+
+
+
     }
 
     update()

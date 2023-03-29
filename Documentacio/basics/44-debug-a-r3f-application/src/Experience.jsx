@@ -11,7 +11,7 @@ export default function Experience()
             step: 0.01,
             joystick: 'invertY'
         },
-        color: '#ff0000',
+        color: '#0077ff',
         visible: true,
         myInterval:
         {
