@@ -39,7 +39,10 @@ loader.load( './suzanne_buffergeometry.json', ( geometry )=> {
     geometry.computeVertexNormals();
     geometry.scale( 0.5, 0.5, 0.5 );
 
-    const material = new THREE.MeshNormalMaterial();
+    //const material = new THREE.MeshNormalMaterial();
+    const material = new THREE.MeshStandardMaterial({
+        color: 0xffffff
+    });
 
     mesh = new THREE.InstancedMesh( geometry, material, count );
     mesh.instanceMatrix.setUsage( THREE.DynamicDrawUsage );
@@ -48,6 +51,11 @@ loader.load( './suzanne_buffergeometry.json', ( geometry )=> {
     gui.add( mesh, 'count', 0, count );
 
 } );
+
+// Llum
+
+const ambientLight = new THREE.AmbientLight({ color:0xfff, intensity:0.5})
+scene.add(ambientLight)
 
 
 /**
@@ -116,12 +124,17 @@ const tick = () =>
             for (let y = 0; y < amount; y++) {
                 for (let z = 0; z < amount; z++) {
 
-                    dummy.position.set((offset - x)*debugObject.distanceX, (offset - y)*debugObject.distanceY, (offset - z)*debugObject.distanceZ);
-                    dummy.rotation.y = (Math.sin(x / 4 + elapsedTime) + Math.sin(y / 4 + elapsedTime) + Math.sin(z / 4 + elapsedTime));
-                    dummy.rotation.z = dummy.rotation.y * 2;
-                    dummy.updateMatrix();
+                    dummy.position.set((offset - x)*debugObject.distanceX, (offset - y)*debugObject.distanceY, (offset - z)*debugObject.distanceZ)
+                    dummy.rotation.y = (Math.sin(x / 4 + elapsedTime) + Math.sin(y / 4 + elapsedTime) + Math.sin(z / 4 + elapsedTime))
+                    dummy.rotation.z = dummy.rotation.y * 2
+                    dummy.updateMatrix()
 
-                    mesh.setMatrixAt(i++, dummy.matrix);
+                    mesh.setMatrixAt(i, dummy.matrix)
+                    const colorX = (new THREE.Color()).lerpColors(new THREE.Color(0xff0000), new THREE.Color(0x00ff00), x/amount)
+                    const colorY = (new THREE.Color()).lerpColors(new THREE.Color(0x0000ff), new THREE.Color(0xffff00), y/amount)
+                    const colorXY = (new THREE.Color()).lerpColors(colorX, colorY, dummy.rotation.y)
+                    mesh.setColorAt(i, colorXY)
+                    i++
                 }
 
             }
